@@ -24,6 +24,10 @@
     <strong>My information.</strong>
     <fieldset>
         <form action=" ">
+           <select name="title" id="">
+               <option value="mr">Mr.</option>
+               <option value="ms">Ms.</option>
+           </select>
             <label>Name</label>
             <input name="name" type="text">
             <br>
@@ -34,28 +38,13 @@
             <input name="phone" type="text"> </fieldset>
     <strong>OrderInformation.</strong>
     <fieldset>
-        <img src="img/download.jpg" alt="">
-        <img src="img/download%20(1).jpg" alt="">
-        <img src="img/download%20(2).jpg" alt="">
-        <img src="img/download%20(3).jpg" alt="">
-
-
-        <select name="Choice1" id="">
-
-            <option value="pizza">pizza</option>
-            <option value="hotdog">hotdog</option>
-            <option value="hamburger">hamburger</option>
-            <option value="Soup">soup</option>
-
-        </select>
+        <input type="checkbox" name="food" value="burger"><img src="img/download.jpg" alt="">
+        <input type="checkbox" name="food" value="soup"><img src="img/download%20(1).jpg" alt="">
+        <input type="checkbox" name="food" value="pizza"><img src="img/download%20(2).jpg" alt="">
+        <input type="checkbox" name="food" value="hotdog"><img src="img/download%20(3).jpg" alt="">
 
         <br>Servings:
         <label>1-4 (select 1 only)</label>
-
-        <input type="checkbox" name=" servings" value="1">1
-        <input type="checkbox" name=" servings" value="2">2
-        <input type="checkbox" name=" servings" value="3">3
-        <input type="checkbox" name="servings" value="4">4
         <br>
         <label>Date</label>
         <input name="Date" type="date">
@@ -65,6 +54,7 @@
 
 
     </fieldset>
+   
     <form action="">
         <textarea name="textarea1" id="" cols="30" rows="10"></textarea>Feel free to leave your comments here.
         <Br>
