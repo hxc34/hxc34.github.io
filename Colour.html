@@ -5,140 +5,133 @@
     <meta charset="UTF-8">
     <title>Colour</title>
     <style>
+        .black {
+            color: white;
+        }
         .black .hex_color {
-            background-color: #000000
+            background-color: #000000;
         }
         
         .black .rgb_color {
-            background-color: rgb(0, 0, 0)
+            background-color: rgb(0, 0, 0);
         }
         
         .black .name_color {
-            background-color: black
+            background-color: black;
         }
         
         .black .hsl_color {
-            background-color: hsl(0, 0%, 0%)
+            background-color: hsl(0, 0%, 0%);
         }
-    </style>
-    <style>
-        .white.hex_color {
-            background-color: #404040
+        .white .hex_color {
+            background-color: #ffffff;
         }
         
         .white .rgb_color {
-            background-color: rgb(255, 255, 255)
+            background-color: rgb(255, 255, 255);
         }
         
         .white .name_color {
-            background-color: white
+            background-color: white;
         }
         
         .white .hsl_color {
             background-color: hsl(0, 0%, 100%)
         }
-    </style>
-    <style>
+  
         .red .hex_color {
             background-color: #FF0000
         }
         
         .red .rgb_color {
-            background-color: rgb(255, 0, 0)
+            background-color: rgba(255, 0, 0, 0.5);
         }
         
         .red .name_color {
-            background-color: red
+            background-color: red;
         }
         
         .red .hsl_color {
-            background-color: hsl(0, 100%, 50%)
+            background-color: hsl(0, 100%, 50%);
         }
-    </style>
-    <style>
+   
         .lime .hex_color {
-            background-color: #00FF00
+            background-color: #00FF00;
         }
         
         .lime .rgb_color {
-            background-color: rgb(0, 255, 0)
+            background-color: rgb(0, 255, 0);
         }
         
         .lime .name_color {
-            background-color: lime
+            background-color: lime;
         }
         
         .lime .hsl_color {
-            background-color: hsl(120, 100%, 50%)
+            background-color: hsl(120, 100%, 50%);
         }
-    </style>
-
-    <style>
-        .blue .hex_color {
-            background-color: #0000FF
+    .hex_color {
+            background-color: #0000FF;
         }
         
         .blue .rgb_color {
-            background-color: rgb(0, 0, 255)
+            background-color: rgb(0, 0, 255);
         }
         
         .blue .name_color {
-            background-color: blue
+            background-color: blue;
         }
         
         .blue .hsl_color {
-            background-color: hsl(240, 100%, 50%)
+            background-color: hsl(240, 100%, 50%);
         }
-    </style>
-    <style>
+   
         .yellow .hex_color {
-            background-color: #FFFF00
+            background-color: #FFFF00;
         }
         
         .yellow .rgb_color {
-            background-color: rgb(255, 255, 0)
+            background-color: rgb(255, 255, 0);
         }
         
         .yellow .name_color {
-            background-color: yellow
+            background-color: yellow;
         }
         
         .yellow .hsl_color {
-            background-color: hsl(60, 100%, 50%)
+            background-color: hsl(60, 100%, 50%);
         }
-    </style>
-    <style>
+   
         .aqua .hex_color {
-            background-color: #00FFFF
+            background-color: #00FFFF;
         }
         
         .aqua .rgb_color {
-            background-color: rgb(0, 255, 255)
+            background-color: rgb(0, 255, 255);
         }
         
         .aqua .name_color {
-            background-color: aqua
+            background-color: aqua;
         }
         
         .aqua .hsl_color {
-            background-color: hsl(180, 100%, 50%)
+            background-color: hsl(180, 100%, 50%);
         }
-    </style>
-    <style>
+   
         .magenta .hex_color {
-            background-color: #FF00FF
+            background-color: #FF00FF;
         }
         
         .magenta .rgb_color {
-            background-color: rgb(255, 0, 255)
+            background-color: rgb(255, 0, 255);
         }
         
         .magenta .name_color {
-            background-color: magenta
+            background-color: magenta;
         }
         
         .magenta .hsl_color {
-            background-color: hsl( 300, 100%, 50%)
+            background-color: hsl( 300, 100%, 50%);
         }
     </style>
 
@@ -157,43 +150,51 @@
             <td class="rgb_color">rgb(0,0,0)</td>
             <td class="name_color">black</td>
             <td class="hsl_color">hsl(0,0%,0%)</td>
-            <tr class="white">
-                <td class="hex_color">#404040</td>
-                <td class="rgb_color">rgb(255,255,255)</td>
-                <td class="name_color">white</td>
-                <td class="hsl_color">hsl(0,0%,100%)</td>
-                <tr class="red">
-                    <td class="hex_color">#FF0000</td>
-                    <td class="rgb_color">rgb(255,0,0)</td>
-                    <td class="name_color">red</td>
-                    <td class="hsl_color">hsl(0,100%,50%)</td>
-                    <tr class="lime">
-                        <td class="hex_color">#00FF00</td>
-                        <td class="rgb_color">rgb(0,255,0)</td>
-                        <td class="name_color">lime</td>
-                        <td class="hsl_color">hsl(120,100%,50%)</td>
-                        <tr class="blue">
-                            <td class="hex_color">#0000FF</td>
-                            <td class="rgb_color">rgb(0,0,255)</td>
-                            <td class="name_color">blue</td>
-                            <td class="hsl_color">hsl(240,100%,50%)</td>
+        </tr>
+        <tr class="white">
+            <td class="hex_color">#ffffff</td>
+            <td class="rgb_color">rgb(255,255,255)</td>
+            <td class="name_color">white</td>
 
-                            <tr class="yellow">
-                                <td class="hex_color">#FFFF00</td>
-                                <td class="rgb_color">rgb(255,255,0)</td>
-                                <td class="name_color">yellow</td>
-                                <td class="hsl_color">hsl(60,100%,50%)</td>
-
-                                <tr class="aqua">
-                                    <td class="hex_color">#00FFFF</td>
-                                    <td class="rgb_color">rgb(0,255,255)</td>
-                                    <td class="name_color">aqua </td>
-                                    <td class="hsl_color">hsl(180,100,50)</td>
-                                    <tr class="magenta">
-                                        <td class="hex_color">#FF00FF</td>
-                                        <td class="rgb_color">rgb(255,0,255)</td>
-                                        <td class="name_color">magenta</td>
-                                        <td class="hsl_color">hsl(300,100%,50%)</td </table>
+            <td class="hsl_color">hsl(0,0%,100%)</td>
+        </tr>
+        <tr class="red">
+            <td class="hex_color">#FF0000</td>
+            <td class="rgb_color">rgb(255,0,0)</td>
+            <td class="name_color">red</td>
+            <td class="hsl_color">hsl(0,100%,50%)</td>
+        </tr>
+        <tr class="lime">
+            <td class="hex_color">#00FF00</td>
+            <td class="rgb_color">rgb(0,255,0)</td>
+            <td class="name_color">lime</td>
+            <td class="hsl_color">hsl(120,100%,50%)</td>
+        </tr>
+        <tr class="blue">
+            <td class="hex_color">#0000FF</td>
+            <td class="rgb_color">rgb(0,0,255)</td>
+            <td class="name_color">blue</td>
+            <td class="hsl_color">hsl(240,100%,50%)</td>
+        </tr>
+        <tr class="yellow">
+            <td class="hex_color">#FFFF00</td>
+            <td class="rgb_color">rgb(255,255,0)</td>
+            <td class="name_color">yellow</td>
+            <td class="hsl_color">hsl(60,100%,50%)</td>
+        </tr>
+        <tr class="aqua">
+            <td class="hex_color">#00FFFF</td>
+            <td class="rgb_color">rgb(0,255,255)</td>
+            <td class="name_color">aqua </td>
+            <td class="hsl_color">hsl(180,100,50)</td>
+        </tr>
+        <tr class="magenta">
+            <td class="hex_color">#FF00FF</td>
+            <td class="rgb_color">rgb(255,0,255)</td>
+            <td class="name_color">magenta</td>
+            <td class="hsl_color">hsl(300,100%,50%)</td>
+        </tr>
+    </table>
 </body>
 
 </html>
