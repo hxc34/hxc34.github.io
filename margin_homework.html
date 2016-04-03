@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <title>Margin</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         div{ 
              border-style:solid;
              border-width: 10px; 
              height: 400px;
              width: 700px;
              color: orange;
-             text-align: center
+             text-align: center;
+            padding:80px 0;
               }
-        span{ color: blue;
-              font-size: 3em;
+        span{ 
+            display:inline-block;
+            color: blue;
+            padding-bottom: 20px;  
+            font-size: 3em;
         }
         p{ font-size: 1.5em;
          
@@ -21,11 +28,21 @@
         p2{
             color: green
         }
+        
+        hr {
+            width: 120px;
+            border-width: 1px;
+            border-style: solid;
+            border-color:blue;
+        }
     </style>
 </head>
 <body>
      <div> <span>Teens Programming </span>
-     <br> <p2>__________________</p2>
+     <br> 
+      <hr>
+         
+<!--         <p2>__________________</p2>-->
      <p>Supporting a well-spent life, a bright career and entrepreneurship Promoting STEM education Science - Technology - Engineering -Math</p><label>Email</label>
     <input name="email" type="email"> <input class="btn" type="submit"></div>
      

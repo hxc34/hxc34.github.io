@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>postion</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: teal;
+        }
+        
+        .one {
+            position: absolute;
+            right: 100px;
+            z-index: 20;
+        }
+        .oneone{
+            position: absolute;
+            background-color: skyblue;
+            z-index: 10;
+            right: 50px;
+        }
+        .two {
+            position: fixed;
+            right: 100px;
+        }
+        
+        .container {
+            width: 200px;
+            background-color: white;
+            border: solid blue 2px;
+            
+            position: relative; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="one">absolute</div>
+                <div class="oneone">absolute</div>
+
+    </div>
+    
+    <div class="container">
+        <div class="two">fixed</div>
+    </div>
+</body>
+
+</html>

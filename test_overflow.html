@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>overflow</title>
+   <style>
+       .container {
+           width: 300px;
+           height: 200px;
+           background-color: turquoise;
+            
+            overflow: scroll;
+       }
+      
+           ::-webkit-scrollbar {
+             -webkit-apperance:none;
+               width: 20px;
+               height: 20px;
+           }
+           ::-webkit-scrollbar-thumb {
+             border-radius: 10px;
+               background-color: rgba(0,250,29,0.5);}
+       .item{
+           width: 200px;
+           height: 200px;
+           background-color: aqua;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+    </div>
+</body>
+</html>
