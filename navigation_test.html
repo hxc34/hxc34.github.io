@@ -1,38 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>nav</title>
-    <style> 
-        ul{
+    <style>
+        ul {
             font-size: 2em;
             background-color: aquamarine;
             color: white;
+            display: inline-block;
+            position: absolute;
+            right: 20px;
+            
+            padding-left:0;
         }
-        li {
-           
+        
+        h2 {
+            font-size: 2em;
             background-color: aqua;
-            margin-left: 69px;
+            display: inline-block;
+        }
+        
+        li {
+            background-color: aqua;
             font-size: 0.5em;
             display: inline-block;
             height: 25px;
             line-height: 25px;
             background-color: limegreen;
-            padding: 10px 10px;
+            padding: 10px 5px;
+            margin-left:0;
+            margin-right:0;
+            
         }
-        @media screen and (max-width:992px) {
-            ul{
+        
+        @media screen and (max-width:768px) {
+            ul {
                 width: 100%;
+                display:block;
             }
+
+        }
     </style>
 </head>
+
 <body>
+    <h2>Teens Programming</h2>
     <ul>
-        <li>Teens Programming</li>
+
         <li>Technologies</li>
         <li>Courses</li>
         <li>About</li>
         <li>Contact</li>
     </ul>
 </body>
+
 </html>
