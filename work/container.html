@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>container</title>
+    <style>
+        #inner{
+            background: lime;
+            width: 200px;
+        }   
+        #container{
+            background: tomato;
+            height: 100px;
+        }
+        
+        #container:before {
+            content: "";
+            float:left;
+            height: 100px;
+            width: 62px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <div id="inner">inner</div>
+     </div>
+</body>
+</html>
