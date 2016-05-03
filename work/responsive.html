@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>responsive</title>
+    <style>
+        #menu, #section {
+            float: left;
+        }
+        #menu{
+            width: 20%;
+        }
+        ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+        #section {
+            width: 80%;
+        }
+        
+        @media screen and (max-width: 600px){
+            #menu {
+                float: right;
+                width: auto;
+               
+            }
+            #section {
+                width: auto;
+            }
+            ul>li {
+                display: inline-block;
+            }
+        
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <div id="menu">
+       <ul>
+           <li><a href="">about</a></li>
+           <li><a href="">blog</a></li>
+           <li><a href="">contact</a></li>
+       </ul>
+    </div>
+    <div id="section">                                <div id="section1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora labore delectus vitae, assumenda quo facere cupiditate repellendus magni, ut praesentium distinctio illum minus omnis atque asperiores dolor aspernatur recusandae enim.</div>
+    <div id="section2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid obcaecati iste, alias optio recusandae facere dolore libero consequuntur, earum quisquam temporibus esse! Quis, magni, alias. Rem perferendis molestias voluptatibus ipsam.</div>
+    <div id="section3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores voluptate error dignissimos excepturi. Ab odit repellendus doloremque, minus adipisci? Libero culpa doloremque, autem dolore asperiores quod architecto distinctio aliquam sunt.</div>
+    </div>
+    </div>
+</body>
+</html>
