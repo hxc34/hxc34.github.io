@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Test</title>
+    <style>
+        #container {
+            width: 600px;
+            height: 400px;
+            background-color: aqua;
+            display: flex;
+           
+            flex-flow: row wrap;
+        }
+        
+        .item {
+/*            flex-basis: 100px;*/
+           flex-basis: 0;
+            flex-grow: 1;
+            height: 100px;
+            background-color: tomato;
+            border: solid;
+        }
+        
+        #item3 {
+          flex-grow: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="item1" class="item"></div>
+        <div id="item2" class="item"></div>
+        <div id="item3" class="item"></div>
+    </div>
+</body>
+
+</html>
