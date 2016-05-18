@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex homework</title>
+    <style>
+        #container{
+            width: 1000px;
+/*            height: 400px;*/
+            display: flex; 
+            flex-direction: column;
+               
+            
+        }
+        #header{
+/*           height: 50px;*/
+           background-color: teal;
+           font-size: 1.8em; 
+           width: 400px; 
+        }
+        #lorem{
+/*           height: 200px;*/
+           background-color: orange;
+           font-size: 1.55em;
+            width: 400px; 
+        }
+        #asideleft{
+/*           height: 50px;*/
+           background-color: cyan;
+           font-size: 1.8em;
+            width: 400px; 
+        }
+        #asideright{
+/*           height: 50px;*/
+           background-color: green;
+           font-size: 1.8em;
+            width: 400px; 
+        }
+        #footer{
+/*           height: 50px;*/
+           background-color: tomato;
+           font-size: 1.8em;
+            width: 400px; 
+        }
+     
+           @media screen and (min-width:600px){
+            #container {
+                flex-flow: row wrap;
+                width: 93%;
+               
+            }
+            
+            #header, #lorem, #footer {
+                flex-basis: 100%;
+            }
+            
+            .aside {
+                flex-basis:0;
+                flex-grow:1;
+            }
+        }
+           @media screen and (min-width:800px){
+            #container {
+                flex-flow: row wrap;
+                width: 93%;
+            }
+            
+            #header, #footer {
+                flex-basis: 93%;
+            }
+            
+               .aside {
+                   flex-basis: 0;
+                   flex-grow: 1;
+                  
+               }
+               #lorem {
+                   flex-basis: auto;
+                  flex-grow: 1;
+                   order: 3
+                   
+               }
+               #asideleft {
+                   order: 2;
+               }
+               #asideright {
+                   order: 4;
+               }
+               #header {
+                   order: 1;
+               }
+               #footer {
+                   order: 5;
+               }
+        }
+    </style>   
+</head>
+<body>
+    <div id="container">
+        <div id="header">Header</div>
+        <div id="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore maxime natus a earum deleniti eveniet amet. Eveniet numquam possimus vero soluta quisquam quos doloribus molestiae, hic, officiis delectus eligendi laboriosam.</div>
+        <div id="asideleft" class='aside'>Aside Left</div>
+        <div id="asideright" class='aside'>Aside Right</div>
+        <div id="footer"> Footer</div>
+    </div>
+</body>
+</html>
+
