@@ -17,12 +17,20 @@
             position: absolute;
             right: 20px;
             padding-left:0;
+            top: 0px;
+        }
+        h3{
+            color: darkgray;
         }
         
         h2 {
             font-size: 2em;
             display: inline-block;
             color: darkgray;
+             position: absolute;
+            top: 200px;
+            width: 100%;
+            background-position:  125px 150px; 
         }
         
         li {
@@ -35,48 +43,40 @@
             margin-right:0;
             
         }
-        
-        @media screen and (min-width:1500px) {
-            ul {
-                width: 100%;
-                display:block;
-            }
-
+      
+        #button {
+         position: absolute;
+            top: 350px;
+            width: 100%;
+            
         }
-        
-        #img{
-            position: absolute; 
-            top: 200px;
-            left: 0;
-            border-width: 100%;
-        }
-         hr {
-            width: 700px;
-            border-width: 1px;
-            border-style: solid;
-            border-color:gray;
+        .image {
+            position: relative;
+            width: 100%;
         }
     </style>
 </head>
-
+ 
 <body>
-    <h2>Teens Programming</h2>
+    <h3>Teens Programming</h3>
     <ul>
         <li>About</li>
         <li>Services</li>
         <li>Contact</li>
     </ul>
     <div id="image">
-        <h2>Landing Page <br> A Template by Start Bootstrap</h2> <hr> 
-    </div>
-    <img src="/img/intro-bg.jpg" alt="">
+       <img src="/img/intro-bg.jpg" alt="">
+        <h2>Start Bootstrap <br> Atemplate by Start Bootstrap</h2>
     
-     <button><i class="fa fa-twitter " aria-hidden="true"></i> Twitter</button>
+    </div>
+    <div id="button">
+     <button><i class="fa fa-twitter fa-2x " aria-hidden="true"></i> Twitter</button>
      
-      <button><i class="fa fa-github " aria-hidden="true"></i> GitHub </button>
-      
+      <br><button><i class="fa fa-github fa-2x" aria-hidden="true"></i> GitHub </button>
+    
        
-      <button><i class="fa fa-linkedin  " aria-hidden="true"></i>LINKEDIN </button>
+     <br> <button><i class="fa fa-linkedin fa-2x"aria-hidden="true"></i>LINKEDIN </button>
+      </div>
 </body>
 
 </html>
