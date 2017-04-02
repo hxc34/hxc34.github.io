@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    #login label {
+        width: 81px;
+        display: inline-block;
+    }
+</style>
+
+<body>
+    <form action="anyServerResource.php" method='post'>
+        <input type="hidden" value="message to server">
+        <input min=1 max=10 type="number">
+        <br>
+        <input type="email">
+        <br>
+        <input type="url">
+        <br>
+
+        <input type="tel" placeholder="111-111-111">
+        <br>
+        <input type="submit">
+        <br>
+        <input min=1 max=10 type="range" oninput="whenChangeRange(this.value)">
+        <label id='rangevalue'>1</label>
+        <br>
+        <input type="radio" name="payment"> Master
+        <input type="radio" name="payment"> Paypal
+        <input type="radio" name="payment"> Visa
+
+    </form>
+    <script>
+        function whenChangeRange(val) {
+            debugger;
+            var range = document.getElementById('rangevalue');
+            // var ranges = document.querySelectorAll('.range');
+            range.innerHTML = val;
+        }
+    </script>
+</body>
+</html
