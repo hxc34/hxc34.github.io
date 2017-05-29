@@ -4,30 +4,30 @@
     <meta charset="UTF-8">
     <title>Background </title>
     <style>
-
+        * {
+            font-size: 1.4em;
+            background-color: antiquewhite;
+            font-family: monospace;
+        }
+        
         .up {
             height: 200px;
         }
-
         
         .stack {
             height: 1200px;
             background-repeat: no-repeat;
-            border: solid lime;
+            border: 9px groove lime;
             background-position: center;
             background-size: 400px;
             background-attachment: fixed;
-            background-image:url(img/Soccer_Blue.jpg);
-            background-image:url(img/Soccer_Gray.jpg);
-            background-image:url(img/Soccer_Green.jpg);
-            background-image:url(img/Soccer_Pink.jpg);
-            background-image:url(img/Soccer_Red.jpg);
-           
-           
-            
+            background-image: url(Soccer_Gray.jpg);
+            background-image: url(Soccer_Red.jpg);
+            background-image: url(Soccer_Blue.jpg);
+            background-image: url(Soccer_Green.jpg);
+            background-image: url(Soccer_Pink.jpg);
         }
         
-
         .downdown {
             height: 300px;
         }
@@ -40,13 +40,15 @@
 </head>
 
 <body>
+    Watch! Magic if you scroll down!
     <div class="up"></div>
     <div class="outer">
         <div class="down">
-            <div class="stack" style="background-image:url('img/Soccer_Blue.jpg');"></div>
-            <div class="stack" style="background-image:url('img/Soccer_Gray.jpg');"></div>
-            <div class="stack" style="background-image:url('img/Soccer_Green.jpg');"></div>
-            <div class="stack" style="background-image:url('img/Soccer_Pink.jpg');"></div>
-            <div class="stack" style="background-image:url('img/Soccer_Red.jpg');"></div>
-            </body>
-
+            <div class="stack" style="background-image:url('Soccer_Gray.jpg');"></div>
+            <div class="stack" style="background-image:url('Soccer_Red.jpg');"></div>
+            <div class="stack" style="background-image:url('Soccer_Blue.jpg');"></div>
+            <div class="stack" style="background-image:url('Soccer_Green.jpg');"></div>
+            <div class="stack" style="background-image:url('Soccer_Pink.jpg');"></div>
+        </div>
+    </div>
+</body>

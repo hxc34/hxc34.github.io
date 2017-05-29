@@ -1,48 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Grumpy!</title>
+    <title>Face</title>
     <style>
         .face {
-            background-color: red;
+            background-color: yellow;
             width: 200px;
             height: 200px;
             border-radius: 200px;
-         }
-        .eye{
-            background-color: firebrick;
+        }
+        
+        .eye {
+            background-color: black;
             width: 65px;
             height: 75px;
             border-radius: 75px;
             top: 40px;
         }
-        .eyeball{
-            background-color:firebrick;
+        
+        .eye1 {
+            background-color: black;
             width: 65px;
             height: 75px;
             border-radius: 75px;
             position: absolute;
             left: 85px;
             top: 10px;
-            }
-        .left{
-            left:55px;
         }
-        .right {
-            left:122px;
+        
+        .eyeball {
+            background-color: white;
+            width: 55px;
+            height: 65px;
+            border-radius: 75px;
+            top: 40px;
+            right: 33px;
         }
-        .mouth{
+        
+        .eyeball1 {
+            background-color: white;
+            width: 55px;
+            height: 65px;
+            border-radius: 75px;
+            top: 40px;
+            right: 33px;
+        }
+        
+        .mouth {
             width: 100px;
             height: 20px;
-            border: solid 8px firebrick;
+            border: solid 8px tomato;
             border-top: none;
             border-radius: 0 0 120px 120px / 0 30px 52px 52px;
-            position:absolute;
+            position: absolute;
             top: 131px;
             left: 50px;
         }
-        .corner{
+        
+        .corner {
             position: absolute;
             background-color: tomato;
             width: 8px;
@@ -50,56 +67,62 @@
             border-radius: 10px;
             top: 125px;
         }
-        .right.corner{
+        
+        .right.corner {
             left: 160px;
             transform: rotate(153deg)
         }
-        .left.corner{
+        
+        .left.corner {
             left: 49px;
             transform: rotate(47deg)
         }
         
-        .eyebrows{
+        .eyebrows {
             position: absolute;
-            background-color: firebrick;
+            background-color: black;
             width: 8px;
             height: 20px;
-    
             top: 1px;
         }
         
-         .right.eyebrows{
+        .right.eyebrows {
             left: 140px;
             transform: rotate(310deg)
         }
-        .left.eyebrows{
+        
+        .left.eyebrows {
             left: 60px;
             transform: rotate(67deg)
         }
-        body {
-            background-color: orange;
-        }
         
+        body {
+            background-color: green;
+        }
+
     </style>
 </head>
+
 <body>
-<div class="face">
- <div class="left eye">
- <div class="eyeball"></div>
- </div>
- 
- <div id="right eye">
- <div class="eyeball"></div>
- </div>
- 
- <div class="mouth"></div>
- <div class="left corner"></div>
- <div class="right corner"></div>
- 
- <div class="left eyebrows "></div>
- <div class="right eyebrows "></div>
- 
+    <div class="face">
+
+        <div class="eye">
+            <div class="eyeball"></div>
+        </div>
+
+        <div class="eye1">
+            <div class="eyeball1"></div>
+        </div>
+
+        <div class="mouth"></div>
+        <div class="left corner"></div>
+        <div class="right corner"></div>
+
+        <div class="left eyebrows "></div>
+        <div class="right eyebrows "></div>
+
     </div>
-    
+
 </body>
+
 </html>

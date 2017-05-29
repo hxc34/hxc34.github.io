@@ -5,9 +5,24 @@
     <meta charset="UTF-8">
     <title>Colour</title>
     <style>
+        body {
+            background-color: aquamarine
+        }
+        
+        div {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+        
+        tr {
+            font-family: sans-serif
+        }
+        
         .black {
             color: white;
         }
+        
         .black .hex_color {
             background-color: #000000;
         }
@@ -23,6 +38,7 @@
         .black .hsl_color {
             background-color: hsl(0, 0%, 0%);
         }
+        
         .white .hex_color {
             background-color: #ffffff;
         }
@@ -38,7 +54,7 @@
         .white .hsl_color {
             background-color: hsl(0, 0%, 100%)
         }
-  
+        
         .red .hex_color {
             background-color: #FF0000
         }
@@ -54,7 +70,7 @@
         .red .hsl_color {
             background-color: hsl(0, 100%, 50%);
         }
-   
+        
         .lime .hex_color {
             background-color: #00FF00;
         }
@@ -70,7 +86,8 @@
         .lime .hsl_color {
             background-color: hsl(120, 100%, 50%);
         }
-    .hex_color {
+        
+        .hex_color {
             background-color: #0000FF;
         }
         
@@ -85,7 +102,7 @@
         .blue .hsl_color {
             background-color: hsl(240, 100%, 50%);
         }
-   
+        
         .yellow .hex_color {
             background-color: #FFFF00;
         }
@@ -101,7 +118,7 @@
         .yellow .hsl_color {
             background-color: hsl(60, 100%, 50%);
         }
-   
+        
         .aqua .hex_color {
             background-color: #00FFFF;
         }
@@ -117,7 +134,7 @@
         .aqua .hsl_color {
             background-color: hsl(180, 100%, 50%);
         }
-   
+        
         .magenta .hex_color {
             background-color: #FF00FF;
         }
@@ -132,6 +149,18 @@
         
         .magenta .hsl_color {
             background-color: hsl( 300, 100%, 50%);
+        }
+        
+        #example {
+            background-color: rgb(255, 0, 0);
+        }
+        
+        #example1 {
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+        
+        img {
+            width: 315px;
         }
     </style>
 
@@ -186,7 +215,7 @@
             <td class="hex_color">#00FFFF</td>
             <td class="rgb_color">rgb(0,255,255)</td>
             <td class="name_color">aqua </td>
-            <td class="hsl_color">hsl(180,100,50)</td>
+            <td class="hsl_color">hsl(180,100,50%)</td>
         </tr>
         <tr class="magenta">
             <td class="hex_color">#FF00FF</td>
@@ -195,6 +224,13 @@
             <td class="hsl_color">hsl(300,100%,50%)</td>
         </tr>
     </table>
+    <h1>Alpha channel or Opacity or Transparency</h1>
+    <h3>Use rgba(255,0,0,0.5) function</h3>
+    <div id="example"></div>
+    <div id="example1"></div>
+    <br>
+    <img src="http://images.techtimes.com/data/images/full/163412/falloutvaultboythumbsup.jpg" alt="">
 </body>
+
 
 </html>
