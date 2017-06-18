@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #container {
+            width: 600px;
+            height: 400px;
+            background-color: blueviolet;
+        }
+        
+        #container:before {
+            content: '';
+            border-right: solid red 3px;
+            width: 10px;
+            height: 400px;
+            background-color: red;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        #item {
+            width: 400px;
+            height: 200px;
+            background-color: grey;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="item"></div>
+    </div>
+</body>
+
+</html>

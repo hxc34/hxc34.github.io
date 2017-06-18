@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: gray;
+        }
+        
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            position: relative;
+        }
+        
+        #main {
+            width: 200px;
+            height: 200px;
+            border-radius: 1000px;
+            background-color: white;
+            box-shadow: 0px 0px 15px darkslategray;
+            z-index: -1
+        }
+        
+        #eyeleft {
+            width: 20px;
+            top: 90px;
+            left: 40px;
+            border-radius: 1000px;
+            height: 20px;
+            background-color: lime;
+            box-shadow: 0px 0px 40px black;
+            z-index: 2;
+        }
+        
+        #eyeleftcorner {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 30px 20px 0;
+            border-color: transparent black transparent transparent;
+            top: 70px;
+            left: 17px;
+        }
+        
+        #eyeleftcorner2 {
+            border-style: solid;
+            border-width: 20px 0px 0px 30px;
+            border-color: transparent transparent transparent black;
+            top: 50px;
+            left: 54px
+        }
+        
+        #eyeright {
+            width: 20px;
+            top: 30px;
+            left: 140px;
+            border-radius: 1000px;
+            height: 20px;
+            background-color: lime;
+            box-shadow: 0px 0px 40px black;
+            z-index: 2;
+        }
+        
+        #eyerightcorner {
+            width: 0;
+            border-style: solid;
+            border-width: 20px 30px 0px 0;
+            border-color: black transparent transparent transparent;
+            top: 10px;
+            left: 153px;
+        }
+        
+        #eyerightcorner2 {
+            width: 0;
+            border-style: solid;
+            border-width: 0 0 20px 30px;
+            border-color: transparent transparent black transparent;
+            bottom: 10px;
+            left: 115px
+        }
+        
+        #mouth {
+            width: 120px;
+            height: 60px;
+            border: solid 5px #000;
+            border-color: transparent red;
+            border-radius: 50%/100px 100px 0px 0px;
+            transform: rotate(180deg);
+            left: 40px;
+            top: 10px;
+            background-color: black;
+            box-shadow: 0px 0px 25px red
+        }
+        
+        #teethtop {
+            border-bottom-right-radius: 60px 38px;
+            border-bottom-left-radius: 60px 38px;
+            width: 100px;
+            height: 10px;
+            background-color: white;
+            bottom: 50px;
+            left: 50px
+        }
+        
+        #teethbottom {
+            border-top-right-radius: 60px 38px;
+            border-top-left-radius: 60px 38px;
+            width: 60px;
+            height: 10px;
+            background-color: white;
+            bottom: 14.8px;
+            left: 70px;
+            box-shadow: 0px 0px 100px red;
+        }
+        
+        #browright {
+            width: 220px;
+            height: 120px;
+            border: solid 5px #000;
+            border-color: red transparent transparent transparent;
+            border-radius: 50%/100px 100px 0 0;
+            transform: rotate(180deg);
+            bottom: 170px;
+            right: 10px;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='main'>
+
+        <div id="eyeleft" class="eye"></div>
+        <div id="eyeleftcorner" class="eye"></div>
+        <div id="eyeleftcorner2" class="eye"></div>
+        <div id="eyeright"></div>
+        <div id="eyerightcorner"></div>
+        <div id="eyerightcorner2"></div>
+        <div id='mouth'></div>
+        <div id="teethtop"></div>
+        <div id="teethbottom"></div>
+        <div id="browright"></div>
+
+    </div>
+
+</body>
+</html>

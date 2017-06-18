@@ -12,35 +12,37 @@
             display: inline-block;
         }
         
-        .navigation {
+        .navigationbar {
             text-align: right;
         }
         
         body {
-            text-align:center;
+            text-align: center;
         }
-    
         
         #capture2 {
-           width: 20px;
+            width: 20px;
             height: 28.3px;
             background-image: url("https://ssl.gstatic.com/gb/images/i2_5d4da36d.png");
             background-repeat: no-repeat;
             background-size: 200px;
             background-position: -18px -58.1px;
         }
-            
-        #capture5{
-            color:aqua;
-            font-family:monospace;
+        
+        #capture5 {
+            color: cornflowerblue;
+            font-family: monospace;
             font-size: 1.5em;
+            height: 235px;
         }
-        #searchbox{
-            border: solid grey;
-            width:530px;
-            margin:0 auto;
+        
+        #searchbox {
+            border: solid 1px grey;
+            width: 530px;
+            margin: 0 auto;
         }
-        #name{
+        
+        #name {
             border: none;
             width: 500px;
             height: 29.5px;
@@ -49,32 +51,51 @@
         #searchbox img {
             vertical-align: bottom;
         }
+        
+        #button {
+            font-size: 1.05em;
+            color: gray;
+        }
+        
+        #bottom {
+            font-size: 1.05em;
+            font-family: sans-serif;
+        }
+        
+        span {
+            color: #07358b;
+        }
+
     </style>
 </head>
 
 <body>
-    <div class="navigation">
-        <div id="capture1"><img src="/img/Capture.PNG" alt=""> </div>
+    <div class="navigationbar">
+        <div id="capture1"><img src="../../img/Capture.PNG" alt=""> </div>
 
-      <a id="capture2" href="https://www.google.com"> </a>
+        <a id="capture2" href="https://www.google.com"> </a>
 
 
-        <div id="capture4"><img src="/img/Capture%204.PNG" alt=""></div>
+        <div id="capture3"><img src="../../img/Capture3.PNG" alt=""></div>
 
     </div>
 
 
 
-    <div id="capture5"><img src="/img/Capture%205.PNG" alt="">Canada </div>
-
-    <div id="Logo">
-        </div>
-    <div id="recent"><img src="/img/Capture%207.PNG" alt=""></div>
-    
-    <div id="searchbox"><input id="name" type="search"> <a href="http://www.google.com"></a>
-   
-    <img src="/img/Capture%208.PNG" alt="">
+    <div id="Logo"><img src="../../img/Capture4.PNG" alt=""></div>
+    <div id="recent">
+        <img src="../../img/Capture5.PNG" alt=""></div>
+    <div id="searchbox"><input id="name" type="search">
+        <img src="../../img/Capturemic.PNG" alt="">
     </div>
+
+    <button id="button">Google Search</button> <button id="button">I'm Feeling Lucky</button>
+    <br>
+    <div id="bottom">
+        Google.ca offered in:
+        <span>Français </span>
+    </div>
+
 </body>
 
 </html>
