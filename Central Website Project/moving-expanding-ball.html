@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Moving Expanding Ball</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="canvas.css">
+</head>
+
+<body>
+    <canvas width=700 height="500">
+    
+    </canvas>
+    <script>
+        canvas = document.querySelector('canvas');
+        context = canvas.getContext('2d');
+
+        //
+        context.arc(200, 200, 100, 0, Math.PI * 2, false);
+        context.stroke();
+        context.fillStyle = 'darkcyan';
+        context.fill();
+        radius = 100;
+        x = 200;
+        vx = 2;
+        y = 200;
+        vy = 2;
+        mx = undefined;
+        my = undefined;
+        canvas.addEventListener('mousemove', function(e) {
+            mx = e.offsetX;
+            my = e.offsetY;
+            console.log(mx, my);
+        });
+
+        function ballmove() {
+            requestAnimationFrame(ballmove);
+
+            context.clearRect(0, 0, 700, 500);
+            if (x + 100 >= 700 || x - 100 <= 0) {
+                vx = -vx
+            }
+            if (y + 300 >= 700 || y - 100 <= 0) {
+                vy = -vy
+            }
+            context.beginPath();
+            context.arc(x, y, 100, 0, Math.PI * 2, false);
+            context.stroke();
+            x += vx;
+            y += vy;
+        }
+        ballmove();
+
+        function changeSize() {
+            requestAnimationFrame(changeSize);
+
+            // clear
+            context.clearRect(0, 0, 700, 500);
+            // update
+            distance = ((mx - x) ** 2 + (my - y) ** 2) ** 0.5;
+            console.log('distance', distance);
+
+            if (distance <= radius) {
+                radius += 2;
+            } else {
+                if (radius > 100) {
+                    radius -= 2;
+                }
+            }
+
+            // redraw
+            context.beginPath();
+            context.arc(x, y, radius, 0, Math.PI * 2, false);
+            context.fill();
+        }
+
+        changeSize();
+    </script>
+</body>
+
+</html>

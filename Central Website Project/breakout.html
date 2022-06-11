@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Breakout Game</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../canvas.css">
+</head>
+
+<body>
+    <canvas width=700 height="500">
+    
+    </canvas>
+    <script>
+        canvas = document.querySelector('canvas');
+        ctx = canvas.getContext('2d');
+
+        var paddle = new Paddle(300, 475)
+        stop = false;
+
+        function Ball() {
+            var t = this;
+            this.radius = 15;
+            this.x = 350;
+            this.y = 500 - paddle.h - this.radius;
+            this.dx = 3;
+            this.dy = 3;
+            this.update = function() {
+                if (t.x >= 700 - t.radius || t.x <= t.radius) {
+                    t.dx = -t.dx;
+
+                }
+                if (t.y <= t.radius) {
+                    this.dy = -this.dy;
+
+                }
+                if (t.y >= 485) {
+                    this.dx = 0
+                    this.dy = 0
+                    ctx.font = '100px Arial';
+                    ctx.lineWidth = 3;
+                    ctx.strokeText('Game Over', 0, 150);
+
+                    restartBtn.draw(canvas.width / 2, canvas.height / 2);
+                }
+                if (t.x > paddle.x && t.x <= paddle.x + paddle.w - 5 && t.y + t.radius > paddle.y) {
+                    this.dy = -this.dy;
+                }
+                this.x += this.dx;
+                this.y += this.dy;
+            }
+            this.draw = function() {
+                ctx.beginPath();
+                var g = ctx.createRadialGradient(this.x - 5, this.y - 5, 1, this.x, this.y, this.radius);
+                g.addColorStop(0, '#' + ('000000' + (Math.floor(Math.random() * 2 ** (4 * 6))).toString(16)).slice(-6))
+                g.addColorStop(0.2, 'black');
+                g.addColorStop(1, 'white');
+                ctx.arc(t.x, t.y, t.radius, 0, Math.PI * 2, false);
+                ctx.fillStyle = g;
+                ctx.fill();
+
+                ctx.stroke();
+            }
+
+
+        }
+
+        ball = new Ball();
+
+        function RestartBtn(width, height) {
+            this.w = width;
+            this.h = height;
+            this.draw = function(x, y) {
+                this.x = x;
+                this.y = y;
+                ctx.beginPath();
+                //                ctx.rect(x, y, this.w, this.y);
+                ctx.rect(x, y, 200, 50);
+                ctx.stroke();
+                ctx.font = '50px Arial';
+                ctx.lineWidth = 3;
+                ctx.textBaseline = 'top';
+                ctx.fillText('Restart', x, y);
+            }
+        }
+
+
+        restartBtn = new RestartBtn(canvas.width / 2, canvas.height / 2);
+        restartBtn.draw(100, 100);
+
+        function Paddle(x, y) {
+            this.x = x;
+            this.y = y;
+            this.w = 100;
+            this.h = 25;
+
+            this.color = 'orange';
+
+            this.update = function() {
+                if (left) {
+                    if (this.x >= 0) {
+                        this.x -= 5
+                    }
+                }
+                if (right) {
+                    if (this.x <= 600) {
+                        this.x += 5
+                    }
+                }
+            }
+            this.render = function() {
+                ctx.beginPath();
+                ctx.rect(this.x, this.y, this.w, this.h);
+                ctx.fillStyle = 'orange';
+                ctx.fill();
+
+
+            }
+        }
+        var left = false;
+        var right = false;
+        document.addEventListener('keydown', function(e) {
+            var kc = e.keyCode || e.charCode;
+            if (kc == 37) {
+                left = true;
+            }
+            if (kc == 39) {
+                right = true;
+
+            }
+
+        });
+        canvas.addEventListener('click', function(e) {
+
+            var x = e.offsetX;
+            var y = e.offsetY;
+            console.log(x, y);
+            if (x >= restartBtn.x && x <= restartBtn.x + restartBtn.w && y >= restartBtn.y && y <= restartBtn.y + restartBtn.h) {
+                stop = true;
+
+            }
+        });
+
+        document.addEventListener('keyup', function(e) {
+            var kc = e.keyCode || e.charCode;
+            if (kc == 37) {
+                left = false;
+
+            }
+            if (kc == 39) {
+                right = false;
+
+            }
+        });
+
+
+        function loop() {
+            requestAnimationFrame(loop);
+
+            // 1 clear
+            if (stop != true) {
+                ctx.clearRect(0, 0, 700, 500);
+
+                // 2 update
+                ball.update();
+                paddle.update();
+
+                // 3 draw
+                ball.draw();
+                paddle.render();
+            }
+        }
+        loop();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Missile Game</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="canvas.css">
+</head>
+
+<body>
+    <canvas width=700 height="500">
+    
+    </canvas>
+    <script>
+        canvas = document.querySelector('canvas');
+        ctx = canvas.getContext('2d');
+
+        function Enemy(x, w, color) {
+            this.x = x;
+            this.y = 0;
+            this.w = w;
+            this.h = 30;
+            this.color = color;
+
+            this.render = function() {
+                ctx.beginPath();
+                this.y++;
+                ctx.rect(this.x, this.y, this.w, this.h);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+
+
+            }
+        }
+        var enemies = [];
+        for (var i = 0; i < 20; i++) {
+            var x = Math.random() * 700;
+            var color = '#' + Math.floor(Math.random() * 167772115).toString(16);
+            var enemy = new Enemy(x, 50, color);
+            enemies.push(enemy);
+        }
+        console.log('enemies:', enemies);
+
+        function Launcher(x, y) {
+            this.x = x;
+            this.y = y;
+            this.missiles = [];
+            this.hitdetect = function(m, mindex) {
+                for (var i = 0; i < enemies.length; i++) {
+                    var e = enemies[i];
+                    if (e.x < (m.x + m.w) && (e.x + e.w) > m.x && e.y + e.h > m.y && e.y < m.y + m.h) {
+                        enemies.splice(i, 1);
+                        this.missiles.splice(mindex, 1);
+                    }
+                }
+            }
+            this.color = 'orange';
+
+            this.render = function() {
+                if (left) {
+                    this.x -= 5
+                }
+                if (right) {
+                    this.x += 5
+                }
+                ctx.beginPath();
+                ctx.rect(this.x, this.y, 50, 50);
+                ctx.fillStyle = 'orange';
+                ctx.fill();
+                if (this.missiles.length > 0) {
+                    for (var i = 0; i < this.missiles.length; i++) {
+                        var m = this.missiles[i];
+
+                        var hit = this.hitdetect(m, i);
+
+                        ctx.beginPath();
+                        ctx.rect(m.x, m.y--, m.w, m.h);
+                        ctx.fillStyle = 'red';
+                        ctx.fill();
+                    }
+                }
+
+            }
+        }
+        var left = false;
+        var right = false;
+        document.addEventListener('keydown', function(e) {
+            var kc = e.keyCode || e.charCode;
+            if (kc == 37) {
+                left = true;
+            }
+            if (kc == 39) {
+                right = true;
+
+            }
+            if (kc == 32) {
+                launcher.missiles.push({
+                    x: launcher.x + 50 / 2,
+                    y: launcher.y,
+                    w: 5,
+                    h: 10
+                });
+            }
+        });
+        document.addEventListener('keyup', function(e) {
+            var kc = e.keyCode || e.charCode;
+            if (kc == 37) {
+                left = false;
+
+            }
+            if (kc == 39) {
+                right = false;
+
+            }
+        });
+        var launcher = new Launcher(350, 450);
+
+        function anim() {
+            requestAnimationFrame(anim);
+            ctx.clearRect(0, 0, 700, 500);
+
+            for (var i = 0; i < enemies.length; i++) {
+                enemies[i].render();
+            }
+                        launcher.render();
+        }
+        anim();
+
+    </script>
+</body>
+
+</html>
