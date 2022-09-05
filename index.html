@@ -36,8 +36,12 @@
             padding: 7px;
             border-bottom: solid grey 2px;
             text-transform: uppercase;
-            font-size: 0.6em;
+            font-size: 0.8em;
             font-weight: 800;
+        }
+        
+        .navbar i{
+            font-size: 20px;
         }
         
         .banner {
@@ -59,7 +63,7 @@
         }
         
         hr {
-            width: 40px;
+            width: 60px;
             margin: 22px auto;
         }
         
@@ -134,13 +138,9 @@
         }
         
         .service {
-            float: left;
+            text-align: center;
             width: 25%;
-        }
-        
-        .service i {
-            font-size: 40px;
-            color: black;
+            display:inline-block;
         }
         
         .service * {
@@ -160,20 +160,29 @@
             overflow: hidden;
             width: 90%;
             margin: 30px auto 50px auto;
+            overflow: hidden;
+            padding-bottom: 0px;
         }
         
         #services img {
             float: center;
         }
         
-        #services {
+        #services i {
+            color: black;
+            font-size: 32px;
+        }
+        .projects {
+            overflow: hidden;
+            width: 90%;
+            margin: 30px auto 50px auto;
             overflow: hidden;
             padding-bottom: 0px;
         }
         
-        #services i {
+        #projects i {
             color: black;
-            font-size: 32px;
+            font-size: 64px;
         }
         
         #download {
@@ -188,6 +197,9 @@
         
         #contact {
             background-color: slategray;
+            text-align: center;
+            vertical-align: bottom;
+            
         }
         #contact h3{
             color: white;
@@ -200,8 +212,8 @@
         }
         
         #contact div {
-            display:inline-block;
             margin: 0 50px;
+            display:inline-block;
         }
         
         #contact i{
@@ -224,18 +236,20 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button class="navbar-toggle" data-toggle="collapse" data-target="#example-nav-collapse">
-                    <span class="sr-only">Toggle navigation
-                     hide, but for screen reader </span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+
                 <a href="" class="navbar-brand">Henry Chen's Website</a>
             </div>
-            <div class="collapse navbar-collapse" id="example-nav-collapse">
+            <div class="navbar-top" id="navbar">
                 <ul class="nav navbar-nav navbar-right">
+                    
+                    <li><a href="mailto: chenhenr825@gmail.com"><i class="fa fa-envelope"></i></a></li>
+                    
+                    <li><a href="https://www.linkedin.com/in/henry-chen-433b15189/"><i class="fa fa-linkedin"></i></a></li>
+                    
+                    <li><a href="https://github.com/hxc34"><i class="fa fa-github"></i></a></li>
+                    
                     <li class="active"><a href="index.html">About Me</a></li>
+
                 </ul>
             </div>
         </div>
@@ -247,6 +261,7 @@
     <section class="section-top">
         <h6>Hello, my name is</h6>  
         <h1> Henry Chen</h1>
+        <img src="Photo2.jpg" width="304" height="304">
         <hr class="black">
         <h4 class="section-subtitle">Third Year Computer Science and Video Game Development at Western University.</h4>
         <p>I’m interested in computer science, specifically programming, developing, and maintaining mods, games, applications, etc.</p> <p>I'm also interested in the social sciences, particularly history and philosophy. In my free time I like to take walks, read, play videogames, and make mods for videogames.</p>
@@ -256,16 +271,16 @@
     <section>
         <h3 class="section-title">My Resume</h3>
         <hr class="black">
-        <a class="btn tomatowhite" href="Resume.PDF" download>Download Here</a>
+        <a class="btn tomatowhite" href="Resume.PDF" download>Download</a>
     </section>
 
     <section id="services" class="bg-white">
-        <h3>Experience</h3>
+        <h3>Relevant Experience</h3>
         <hr class="black">
         <div class="services">
             <div class="service">
-                <h3 class="servicename">Junior Achievement Business Program</h3>
-                <p class="service-explain">
+                <h3 class="servicename">Junior Achievement Business Program (Club)</h3>
+                <p id="steam" class="service-explain">
                     <i class="fa fa-building-o"></i>
                 </p>
                 <p class="service-explain">
@@ -275,7 +290,7 @@
 
             </div>
             <div class="service">
-                <h3 class="servicename">Pathfinders Organization</h3>
+                <h3 class="servicename">Pathfinders Organization (8 week summer job)</h3>
                 <p class="service-explain">
                         <i class="fa fa-database"></i>
                 </p> 
@@ -285,7 +300,7 @@ Fixed errors on dozens of organization WordPress websites and Google ads account
             <h5>Skills: Self-management, communication, attention to detail, reliability, WordPress, Microsoft Office</h5>    
             </div>
             <div class="service">
-                <h3 class="servicename">Western Developers Society</h3>
+                <h3 class="servicename">Western Developers Society (Club)</h3>
                 <p class="service-explain">
                     <i class="fa fa-file-code-o"></i>
                 </p>
@@ -302,11 +317,11 @@ Currently working on helping the development of this club's website. Work mainly
         <hr class="black">
         <div class="services">
 <h3 class="servicename">Languages: Python, Java, Linux, C, R, Assembly, HTML5, CSS, Javascript <i class="fa fa-laptop"></i> </h3>
-<h3 class="servicename">Applications: Github, Microsoft Office, React Framework, UMLet, ProjectLibre, Bitbucket, Jira, Confluence, Figma, Slack, WordPress <i class="fa fa-cog"></i> </h3>
+<h3 class="servicename">Applications: Github, Microsoft Office, React Framework, UMLet, ProjectLibre, Bitbucket, Jira, Confluence, Figma, Slack, WordPress, Brackets <i class="fa fa-cog"></i> </h3>
         </div>
     </section>
 
-        <section id="services" class="bg-white">
+        <section id="projects" class="bg-white">
         <h3>Personal Projects</h3>
         <hr class="black">
         <div class="services">
@@ -319,20 +334,20 @@ Currently working on helping the development of this club's website. Work mainly
                     Made one mod that made the game more historically accurate and enjoyable for players. Made another mod adding a GUI into the game, adding more ingame debugging capabilities, as
                     well as making debugging more flexible.
                 </p>
-                <h5>Skills: Modding Scripting Language, Troubleshooting</h5>  
-                <a class="btn tomatowhite" href="https://steamcommunity.com/workshop/filedetails/?id=2590485362">Link Here</a>
+                <h5>Skills: Modding Scripting Language, attention to detail</h5>  
+                <a class="btn tomatowhite" href="https://steamcommunity.com/workshop/filedetails/?id=2590485362">Link</a>
             </div>
             <div class="service">
                 <h3 class="servicename">Crypto Currency Display and Analysis Application</h3>
                 <p class="service-explain">
-                    <i class="fa fa-line-chart"></i>
+                    <img src="CryptoTool.PNG" width="376" height="188">
                 </p>
                 <p class="service-explain">
                  Analyzes and Displays real time data about crypto currencies. A product of group work done via Java. Allows a potential investor to better visualise and understand the
                     situation of the cryptocurrency market.
                 </p>
-                                <h5>Skills: Jira, BitBucket, Confluence, Java, collaboration, self-management</h5>  
-                <a class="btn tomatowhite" href="CryptoTool.zip" download>Download Here</a>
+                                <h5>Skills: Self-management, Jira, BitBucket, Confluence, Java, collaboration, </h5>  
+                <a class="btn tomatowhite" href="CryptoTool.zip" download>Download</a>
             </div>
             <div class="service">
                 <h3 class="servicename">Western Developers Society Website</h3>
@@ -343,7 +358,7 @@ Currently working on helping the development of this club's website. Work mainly
                  Currently working on helping the development of this club's website.
                 </p>
                             <h5>Skills: Self-managemnt, communication, Javascript, CSS, React Framework, Slack, Figma</h5>  
-                <a class="btn tomatowhite">Coming Soon!</a>
+                <a class="btn tomatowhite">WIP!</a>
             </div>
         </div>
     </section>
@@ -352,18 +367,24 @@ Currently working on helping the development of this club's website. Work mainly
         <h3>Contact</h3>
         <hr class="black">
         <div>
-        <i class="fa fa-linkedin"></i>
-        <a href="https://www.linkedin.com/in/henry-chen-433b15189/">Henry Chen</a>
+        <a href="mailto: chenhenr825@gmail.com"><i class="fa fa-envelope"></i></a>
+        </div>
+        <div>
+        <a href="https://www.linkedin.com/in/henry-chen-433b15189/"><i class="fa fa-linkedin"></i></a>
         </div>
          <div>
-        <i class="fa fa-github"></i>
-        <a href="https://github.com/hxc34">hxc34</a>
+        <a href="https://github.com/hxc34"><i class="fa fa-github"></i></a>
         </div>
         <p></p>
      <div><img src="Prof.jpg" alt=""></div>
      
     </section>
-    
+    <section id="contact" class="bg-white">
+        © 2022 Henry Chen. Created via HTML5 and CSS in Brackets
+    </section>
+    <section id="contact" class="bg-white">
+    </section>
+
     <script src="js/jquery.js"/>
     <script src="js/bootstrap.js"/>
 </body>
