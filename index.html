@@ -19,12 +19,8 @@
         
         nav h3,
         ul {
-            display: inline-block;
-        }
-        
-        ul {
-            position: absolute;
-            right: 10px;
+            display: flex;
+            flex-wrap: nowrap;
         }
         
         li {
@@ -44,15 +40,10 @@
             font-size: 20px;
         }
         
-        .banner {
-            text-align: center;
-        }
-        
         header {
             background-size: cover;
             background-position: center;
             color: white;
-            background-color: lightgray;
         }
         
         h1 {
@@ -128,7 +119,7 @@
         }
 
         section.section-top {
-            padding-top: 80px;
+            padding-top: 120px;
             padding-bottom: 10px;
         }
         
@@ -236,7 +227,6 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-
                 <a href="" class="navbar-brand">Henry Chen's Website</a>
             </div>
             <div class="navbar-top" id="navbar">
@@ -251,12 +241,10 @@
                     <li class="active"><a href="index.html">About Me</a></li>
 
                 </ul>
+                
             </div>
         </div>
     </nav>
-        <div class="banner">
-            
-        </div>
     </header>
     <section class="section-top">
         <h6>Hello, my name is</h6>  
@@ -322,7 +310,7 @@ Currently working on helping the development of this club's website. Work mainly
         </div>
     </section>
 
-        <section id="projects" class="bg-white">
+    <section id="projects" class="bg-white">
         <h3>Personal Projects</h3>
         <hr class="black">
         <div class="services">
@@ -341,7 +329,7 @@ Currently working on helping the development of this club's website. Work mainly
             <div class="service">
                 <h3 class="servicename">Crypto Currency Display and Analysis Application</h3>
                 <p class="service-explain">
-                    <img src="CryptoTool.PNG" width="376" height="188">
+                    <i class="fa fa-line-chart"></i>
                 </p>
                 <p class="service-explain">
                  Analyzes and Displays real time data about crypto currencies. A product of group work done via Java. Allows a potential investor to better visualise and understand the
@@ -363,7 +351,13 @@ Currently working on helping the development of this club's website. Work mainly
             </div>
         </div>
     </section>
-    
+    <section id="projects" class="bg-white">
+         <div>
+                <p class="service-explain">
+                    <img src="CryptoTool.PNG" width="376" height="188">
+                </p>
+        </div>
+    </section>    
     <section id="contact" class="bg-white">
         <h3>Contact</h3>
         <hr class="black">
@@ -376,9 +370,6 @@ Currently working on helping the development of this club's website. Work mainly
          <div>
         <a href="https://github.com/hxc34"><i class="fa fa-github"></i></a>
         </div>
-        <p></p>
-     <div><img src="Prof.jpg" alt=""></div>
-     
     </section>
     <section id="contact" class="bg-white">
         © 2022 Henry Chen. Created via HTML5 and CSS in Brackets
