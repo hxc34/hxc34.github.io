@@ -3,24 +3,27 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source Sans 3' rel='stylesheet' />
     
     <style>
         * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+            font-family: 'Source Sans 3';
         }
         
-        body {
-            font-family: "Open Sans";
-        }
         /*
         Header
         */
+        
+        .navbar i {
+           padding: 3.5px 9.9px;
+        }
+        
         .navbar {
             overflow: hidden;
             background-color: #333;
-            font-family: Arial, Helvetica, sans-serif;
         }
         
         .navbar a {
@@ -45,12 +48,11 @@
             color: white;
             padding: 14px 16px;
             background-color: inherit;
-            font-family: inherit;
             margin: 0;
         }
         
         .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-            background-color: red;
+            background-color: #888b8d;
         }
         
         .dropdown-content {
@@ -79,6 +81,9 @@
             display: block;
         }
         
+        /*
+        General Content
+        */
         h1 {
             color: white;
         }
@@ -151,7 +156,7 @@
         }
 
         section.section-top {
-            padding-top: 120px;
+            padding-top: 0px;
             padding-bottom: 10px;
         }
         
@@ -251,22 +256,43 @@
             color: white;
         }
         
+        /*
+        SCRIPT related
+        */
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        
     </style>
 </head>
 
 <body style="background-color:slategray;">
-    <div class="navbar">
-        <a href="#home"><i class="fa fa-envelope"></i></a>
-        <a href="#news"><i class="fa fa-linkedin"></i></a>
-        <a href="%github"><i class="fa fa-github"></i></a>
+    <div id="placeholder">
+    </div>
+    
+    <div class="navbar" id="myHeader">
+        <a href="https://hxc34.github.io/">
+            Henry Chen
+        </a>
+        <a href="mailto: chenhenr825@gmail.com">
+            <i class="fa fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/henry-chen-433b15189/">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/hxc34"><i class="fa fa-github"></i></a>
         <div class="dropdown">
             <button class="dropbtn" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </button>
             <div class="dropdown-content" id="myDropdown">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <a href="#">Introduction</a>
+                <a href="#">About Me</a>
+                <a href="#">Work History</a>
+                <a href="#">Project History</a>
             </div>
         </div> 
     </div>
@@ -289,22 +315,51 @@
         }
     </script>
     
-    <section class="section-top">
-        <h6>Hello, my name is</h6>  
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+        
+        function scrollFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+                document.getElementById("topHeader").style.paddingTop = "50px";
+                
+            } else {
+                header.classList.remove("sticky");
+                document.getElementById("topHeader").style.paddingTop = "0px";
+            }
+        }
+    </script>
+    
+    <section class="section-top" id="topHeader">
+        <h5>Hello, my name is</h5>  
         <h1> Henry Chen</h1>
         <img src="Photo.jpg" width="300" height="400">
         <hr class="black">
         <h4 class="section-subtitle">Third Year Computer Science and Video Game Undergrad at Western University.</h4>
-        <p>I’m interested in computer science, specifically programming, developing, and maintaining mods, games, applications, etc.</p> <p>I'm also interested in the social sciences, particularly history and philosophy. In my free time I like to take walks, read, play videogames, and make mods for videogames.</p>
+        <p>I’m interested in computer science, specifically programming, developing, and maintaining mods, games, applications, etc.</p> 
+        <p>I'm also interested in the social sciences, particularly history and philosophy. In my free time I like to take walks, read, play videogames, and make mods for videogames.
+        </p>
         <h4>Currently a Quality Assurance Intern At J.D. Power</h4>
-
      </section>
     <section>
         <h3 class="section-title">My Resume</h3>
         <hr class="black">
         <a class="btn tomatowhite" href="Resume.PDF" target="_blank">Read</a>
     </section>
-
+    
+    <section id="services" class="bg-white">
+        <h3>Skills</h3>
+        <hr class="black">
+        <div class="services">
+            <h3 class="servicename">Languages: Python, Java, Linux, C, R, Assembly, HTML5, CSS, Javascript <i class="fa fa-laptop"></i> </h3>
+            <h3 class="servicename">Applications: Github, Microsoft Office, React Framework, UMLet, ProjectLibre, Bitbucket, Jira, Confluence, Figma, Slack, WordPress, Brackets <i class="fa fa-cog"></i> </h3>
+            <h3 class="servicename">Software Planning and Development Life Cycles, Agile Development Methodologies <i class="fa fa-arrow-circle-o-right"></i> </h3>
+        </div>
+    </section>
+    
     <section id="services" class="bg-white">
         <h3>Relevant Experience</h3>
         <hr class="black">
@@ -326,9 +381,11 @@
                         <i class="fa fa-database"></i>
                 </p> 
                 <p class="service-explain">
-Fixed errors on dozens of organization WordPress websites and Google ads accounts. Also managed, edited, and created a large variety of data spreadsheets for the organisation
+                    Fixed errors on dozens of organization WordPress websites and Google ads accounts. Also managed, edited, and created a large variety of data spreadsheets for the organisation
                 </p>
-            <h5>Skills: Self-management, communication, attention to detail, reliability, WordPress, Microsoft Office</h5>    
+                <h5>
+                    Skills: Self-management, communication, attention to detail, reliability, WordPress, Microsoft Office
+                </h5>    
             </div>
             <div class="service">
                 <h3 class="servicename">Western Developers Society (2022 - Ongoing Club)</h3>
@@ -336,22 +393,14 @@ Fixed errors on dozens of organization WordPress websites and Google ads account
                     <i class="fa fa-file-code-o"></i>
                 </p>
                 <p class="service-explain">
-Currently working on helping the development of this club's website. Work mainly focused on the home and contact pages, and was done using Javascript and CSS via the React Framework.
+                    Currently working on helping the development of this club's website. Work mainly focused on the home and contact pages, and was done using Javascript and CSS via the React Framework.
                 </p>
-            <h5>Skills: Self-management, communication, Javascript, CSS, React Framework, Slack, Figma</h5>  
+                <h5>Skills: Self-management, communication, Javascript, CSS, React Framework, Slack, Figma</h5>  
             </div>
         </div>
     </section>
 
-    <section id="services" class="bg-white">
-        <h3>Technical and Organizational Skills</h3>
-        <hr class="black">
-        <div class="services">
-<h3 class="servicename">Languages: Python, Java, Linux, C, R, Assembly, HTML5, CSS, Javascript <i class="fa fa-laptop"></i> </h3>
-<h3 class="servicename">Applications: Github, Microsoft Office, React Framework, UMLet, ProjectLibre, Bitbucket, Jira, Confluence, Figma, Slack, WordPress, Brackets <i class="fa fa-cog"></i> </h3>
-<h3 class="servicename">Software Planning and Development Life Cycles, Agile Development Methodologies <i class="fa fa-arrow-circle-o-right"></i> </h3>
-        </div>
-    </section>
+
 
     <section id="projects" class="bg-white">
         <h3>Personal Projects</h3>
@@ -395,13 +444,6 @@ Currently working on helping the development of this club's website. Work mainly
         </div>
     </section>
     <section id="projects" class="bg-white">
-         <div>
-                <p class="service-explain">
-                    <img src="CryptoTool.PNG" width="476" height="288">
-                </p>
-        </div>
-    </section>  
-    <section id="projects" class="bg-white">
             <div class="service">
                 <h3 class="servicename">My Website (2022)</h3>
                 <p class="service-explain">
@@ -420,14 +462,16 @@ Currently working on helping the development of this club's website. Work mainly
         <a href="mailto: chenhenr825@gmail.com"><i class="fa fa-envelope"></i></a>
         </div>
         <div>
-        <a href="https://www.linkedin.com/in/henry-chen-433b15189/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/henry-chen-433b15189/">
+            <i class="fa fa-linkedin"></i>
+            </a>
         </div>
          <div>
         <a href="https://github.com/hxc34"><i class="fa fa-github"></i></a>
         </div>
     </section>
     <section id="contact" class="bg-white">
-        © 2022 Henry Chen. Created via HTML5 and CSS in Brackets
+        © 2024 Henry Chen. Created using HTML5, CSS and Javascript in Brackets
     </section>
     <section id="contact" class="bg-white">
     </section>
