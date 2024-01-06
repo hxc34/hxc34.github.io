@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    /*
+        General Content
+    
+    hr {
+        width: 60px;
+        margin: 22px auto;
+        border: solid black 0.1em;
+    }
+    
+    h1,h2,h3,h4,h5,h6{
+        color: white;
+    }
+    */
+    /*
+        Header Content
+    */
+    .navbar {
+        overflow: hidden;
+        background-color: #333;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+    
+    .dropdown .dropbtn {
+        cursor: pointer;
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+    
+    .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+        background-color: red;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+    
+    .show {
+        display: block;
+    }
+    
+    /* 
+        Styling for the bottom contact bar
+    */
+    #contact {
+        text-align: center;
+        vertical-align: bottom;
+        
+    }
+    #contact p {
+        width:60%;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+    #contact div {
+        margin: 0 50px;
+        display:inline-block;
+    }
+    
+    #contact i{
+        font-size:30px;
+        color: black;
+        margin-top:15px;
+    }
+    #contact address {
+        font-size:18px;
+    }
+</style>
+</head>
+    
+<body style="background-color:slategray;">
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div> 
+    </div>
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+    
+    <section class="section-top">
+        <h6>Hello, my name is</h6>  
+        <h1> Henry Chen</h1>
+        <img src="Photo.jpg" width="300" height="400">
+        <hr class="black">
+        <h4 class="section-subtitle">Third Year Computer Science and Video Game Undergrad at Western University.</h4>
+        <p>I’m interested in computer science, specifically programming, developing, and maintaining mods, games, applications, etc.</p> <p>I'm also interested in the social sciences, particularly history and philosophy. In my free time I like to take walks, read, play videogames, and make mods for videogames.</p>
+        <h4>Currently a Quality Assurance Intern At J.D. Power</h4>
+
+    </section>
+    <section>
+        <h3 class="section-title">My Resume</h3>
+        <hr class="black">
+        <a class="btn tomatowhite" href="Resume.PDF" target="_blank">Read</a>
+    </section>
+
+    <section id="services" class="bg-white">
+        <h3>Relevant Experience</h3>
+        <hr class="black">
+        <div class="services">
+            <div class="service">
+                <h3 class="servicename">Junior Achievement Business Program (2017-2018 Program)</h3>
+                <p id="steam" class="service-explain">
+                    <i class="fa fa-building-o"></i>
+                </p>
+                <p class="service-explain">
+                Worked in numerous roles in a scarf company that I founded with other students, including management, accounting, production, sales, and marketing
+                </p>
+            <h5>Skills: Self-management, collaboration, communication, reliability, Microsoft Office</h5>    
+
+            </div>
+            <div class="service">
+                <h3 class="servicename">Pathfinders Organization (2022 8 week summer job)</h3>
+                <p class="service-explain">
+                        <i class="fa fa-database"></i>
+                </p> 
+                <p class="service-explain">
+                    Fixed errors on dozens of organization WordPress websites and Google ads accounts. Also managed, edited, and created a large variety of data spreadsheets for the organisation
+                </p>
+            <h5>Skills: Self-management, communication, attention to detail, reliability, WordPress, Microsoft Office</h5>    
+            </div>
+            <div class="service">
+                <h3 class="servicename">Western Developers Society (2022 - Ongoing Club)</h3>
+                <p class="service-explain">
+                    <i class="fa fa-file-code-o"></i>
+                </p>
+                <p class="service-explain">
+                    Currently working on helping the development of this club's website. Work mainly focused on the home and contact pages, and was done using Javascript and CSS via the React Framework.
+                </p>
+            <h5>Skills: Self-management, communication, Javascript, CSS, React Framework, Slack, Figma</h5>  
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="bg-white">
+        <h3>Technical and Organizational Skills</h3>
+        <hr class="black">
+        <div class="services">
+            <h3 class="servicename">Languages: Python, Java, Linux, C, R, Assembly, HTML5, CSS, Javascript <i class="fa fa-laptop"></i> </h3>
+            <h3 class="servicename">Applications: Github, Microsoft Office, React Framework, UMLet, ProjectLibre, Bitbucket, Jira, Confluence, Figma, Slack, WordPress, Brackets <i class="fa fa-cog"></i> </h3>
+            <h3 class="servicename">Software Planning and Development Life Cycles, Agile Development Methodologies <i class="fa fa-arrow-circle-o-right"></i> </h3>
+        </div>
+    </section>
+
+    <section id="projects" class="bg-white">
+        <h3>Personal Projects</h3>
+        <hr class="black">
+        <div class="services">
+            <div class="service">
+                <h3 class="servicename">Hearts of Iron 4 Mods (2021 - Ongoing)</h3>
+                <p class="service-explain">
+                    <i class="fa fa-gamepad"></i>
+                </p>
+                <p class="service-explain">
+                    Made one mod that made the game more historically accurate and enjoyable for players. Made another mod adding a GUI into the game, adding more ingame debugging capabilities, as
+                    well as making debugging more flexible.
+                </p>
+                <h5>Skills: Modding Scripting Language, attention to detail</h5>  
+                <a class="btn tomatowhite" href="https://steamcommunity.com/workshop/filedetails/?id=2590485362">Link</a>
+            </div>
+            <div class="service">
+                <h3 class="servicename">Crypto Currency Display and Analysis Application (2021)</h3>
+                <p class="service-explain">
+                    <i class="fa fa-line-chart"></i>
+                </p>
+                <p class="service-explain">
+                 Analyzes and Displays real time data about crypto currencies. A product of group work done via Java. Allows a potential investor to better visualise and understand the
+                    situation of the cryptocurrency market.
+                </p>
+                <h5>
+                        Skills: Self-management, Jira, BitBucket, Confluence, Java, collaboration, 
+                </h5>  
+                <a class="btn tomatowhite">Image Below</a>
+            </div>
+            <div class="service">
+                <h3 class="servicename">Western Developers Society Website (2022 - Ongoing)</h3>
+                <p class="service-explain">
+                    <i class="fa fa-file-code-o"></i>
+                </p>
+                <p class="service-explain">
+                 Currently working on helping the development of this club's website.
+                </p>
+                            <h5>Skills: Self-managemnt, communication, Javascript, CSS, React Framework, Slack, Figma</h5>  
+                <a class="btn tomatowhite">WIP!</a>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="bg-white">
+         <div>
+            <p class="service-explain">
+                <img src="CryptoTool.PNG" width="476" height="288">
+            </p>
+        </div>
+    </section>  
+    <section id="projects" class="bg-white">
+        <div class="service">
+            <h3 class="servicename">My Website (2022)</h3>
+            <p class="service-explain">
+                <i class="fa fa-sitemap"></i>
+            </p>
+            <p class="service-explain">
+             The website you are looking at right now!
+            </p>
+            <h5>Skills: Github, Brackets, HTML5, CSS</h5>  
+        </div>
+    </section> 
+    <section id="contact" class="bg-white">
+        <h3>Contact</h3>
+        <hr class="black">
+        <div>
+        <a href="mailto: chenhenr825@gmail.com"><i class="fa fa-envelope"></i></a>
+        </div>
+        <div>
+        <a href="https://www.linkedin.com/in/henry-chen-433b15189/"><i class="fa fa-linkedin"></i></a>
+        </div>
+         <div>
+        <a href="https://github.com/hxc34"><i class="fa fa-github"></i></a>
+        </div>
+    </section>
+    <section id="contact" class="bg-white">
+        © 2022 Henry Chen. Created via HTML5 and CSS in Brackets
+    </section>
+    <section id="contact" class="bg-white">
+    </section>
+</body>
+</html>

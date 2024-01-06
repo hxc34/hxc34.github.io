@@ -1,11 +1,12 @@
 <html>
 <title>Henry Chen's Website</title>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/bootstrap.css">
-
     <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    
     <style>
         * {
             padding: 0;
@@ -17,33 +18,66 @@
             font-family: "Open Sans";
         }
         
-        nav h3,
-        ul {
-            display: flex;
-            flex-wrap: nowrap;
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            font-family: Arial, Helvetica, sans-serif;
         }
         
-        li {
-            display: inline-block;
-            margin-left: 2em;
-        }
-        
-        nav {
-            padding: 7px;
-            border-bottom: solid grey 2px;
-            text-transform: uppercase;
-            font-size: 0.8em;
-            font-weight: 800;
-        }
-        
-        .navbar i{
-            font-size: 20px;
-        }
-        
-        header {
-            background-size: cover;
-            background-position: center;
+        .navbar a {
+            float: left;
+            font-size: 16px;
             color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        
+        .dropdown .dropbtn {
+            cursor: pointer;
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        
+        .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+            background-color: red;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        
+        .show {
+            display: block;
         }
         
         h1 {
@@ -222,30 +256,39 @@
 </head>
 
 <body>
-    <header>
-
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a href="" class="navbar-brand">Henry Chen</a>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">Dropdown
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
             </div>
-            <div class="navbar-top" id="navbar">
-                <ul class="nav navbar-nav navbar-right">
-                    
-                    <li><a href="mailto: chenhenr825@gmail.com"><i class="fa fa-envelope"></i></a></li>
-                    
-                    <li><a href="https://www.linkedin.com/in/henry-chen-433b15189/"><i class="fa fa-linkedin"></i></a></li>
-                    
-                    <li><a href="https://github.com/hxc34"><i class="fa fa-github"></i></a></li>
-                    
-                    <li class="active"><a href="index.html">About Me</a></li>
-
-                </ul>
-                
-            </div>
-        </div>
-    </nav>
-    </header>
+        </div> 
+    </div>
+    
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+    
     <section class="section-top">
         <h6>Hello, my name is</h6>  
         <h1> Henry Chen</h1>
@@ -259,7 +302,7 @@
     <section>
         <h3 class="section-title">My Resume</h3>
         <hr class="black">
-        <a class="btn tomatowhite" href="Resume.PDF" download>Download</a>
+        <a class="btn tomatowhite" href="Resume.PDF" target="_blank">Read</a>
     </section>
 
     <section id="services" class="bg-white">
@@ -358,7 +401,7 @@ Currently working on helping the development of this club's website. Work mainly
                 </p>
         </div>
     </section>  
-        <section id="projects" class="bg-white">
+    <section id="projects" class="bg-white">
             <div class="service">
                 <h3 class="servicename">My Website (2022)</h3>
                 <p class="service-explain">
@@ -369,7 +412,7 @@ Currently working on helping the development of this club's website. Work mainly
                 </p>
                             <h5>Skills: Github, Brackets, HTML5, CSS</h5>  
             </div>
-        </section> 
+    </section> 
     <section id="contact" class="bg-white">
         <h3>Contact</h3>
         <hr class="black">
@@ -388,9 +431,6 @@ Currently working on helping the development of this club's website. Work mainly
     </section>
     <section id="contact" class="bg-white">
     </section>
-
-    <script src="js/jquery.js"/>
-    <script src="js/bootstrap.js"/>
 </body>
 
 </html>
