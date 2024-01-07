@@ -172,7 +172,7 @@
             padding: 0 0 20px 0;
         }
           
-        .skills {
+        .about {
             overflow: hidden;
             width: 90%;
             margin: 10px auto 0px auto;
@@ -180,7 +180,7 @@
             padding-bottom: 0px; 
         }
         
-        .skills-container{
+        .about-container{
             overflow: hidden;
             width: 90%;
             margin: 10px auto 0px auto;
@@ -192,12 +192,20 @@
             float: center;
         }
         
-        #skills i {
+        #about i {
             color: black;
             font-size: 32px;
         }
         
         .projects {
+            overflow: hidden;
+            width: 90%;
+            margin: 10px auto 0px auto;
+            overflow: hidden;
+            padding-bottom: 0px;
+        }
+        
+        .workHistory {
             overflow: hidden;
             width: 90%;
             margin: 10px auto 0px auto;
@@ -304,10 +312,10 @@
                 <i class="fa fa-bars"></i>
             </button>
             <div class="dropdown-content" id="myDropdown">
-                <a href="#">Introduction</a>
-                <a href="#">Work History</a>
-                <a href="#">Project History</a>
-                <a href="#">About Me</a>
+                <a onclick="scrollStart()" >Introduction</a>
+                <a onclick="scrollWork()" >Work History</a>
+                <a onclick="scrollProject()" >Project History</a>
+                <a onclick="scrollAbout()" >About Me</a>
             </div>
         </div> 
     </div>
@@ -327,6 +335,21 @@
                     myDropdown.classList.remove('show');
                 }
             }
+        }
+    </script>
+    
+    <script>
+        function scrollStart() {
+            document.getElementById("topHeader").scrollIntoView();
+        }
+        function scrollWork() {
+            document.getElementById("workHistory").scrollIntoView();
+        }
+        function scrollProject() {
+            document.getElementById("projects").scrollIntoView();
+        }
+        function scrollAbout() {
+            document.getElementById("about").scrollIntoView();
         }
     </script>
     
@@ -360,7 +383,7 @@
         <a class="btnResume" href="Resume.pdf" target="_blank">Read Here</a>
      </section>
     
-    <section id="projects">
+    <section id="workHistory">
         <div class="services">
             <h3>Work History</h3>
             <hr class="black-left">
@@ -573,12 +596,12 @@
         </div>
     </section>
 
-    <section id="skills">
-        <div class="skills-container">
+    <section id="about">
+        <div class="about-container">
             <h3>About Me</h3>
             <hr class="black-left">
         </div>
-        <div class="skills-container">
+        <div class="about-container">
             <h3 class="servicename">
                 <i class="fa fa-language"></i> Languages: Python, Java, Shell-Scripting, C++, R, Assembly, HTML5, CSS, Javascript, Cucumber 
             </h3>
