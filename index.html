@@ -18,6 +18,7 @@
         
         .navbar i {
            padding: 3.5px 9.9px;
+           font-size: 18px;    
         }
         
         .navbar {
@@ -27,7 +28,7 @@
         
         .navbar a {
             float: left;
-            font-size: 16px;
+            font-size: 18px;
             color: white;
             text-align: center;
             padding: 14px 16px;
@@ -83,9 +84,6 @@
         /*
         General Content
         */
-        h1.name {
-            font-size: 36px;
-        }
         
         hr {
             width: 300px;
@@ -262,7 +260,7 @@
             font-size: 15px;
         }
         #contact h3 {
-            font-size: 24px;
+            font-size: 28px;
         }
         #contact div {
             margin: 0 50px;
@@ -270,15 +268,21 @@
         }
         
         #contact i{
-            font-size:30px;
+            font-size:32px;
             color: black;
             margin-top:15px;
         }
         
         #contact address {
-            font-size:18px;
+            font-size:24px;
         }
         
+        /*
+        Specific Font Size
+        */
+        h1.name {
+            font-size: 40px;
+        }
         /*
         SCRIPT related
         */
@@ -344,9 +348,11 @@
         }
         function scrollWork() {
             document.getElementById("workHistory").scrollIntoView();
+            window.scrollBy(0, -50);
         }
         function scrollProject() {
             document.getElementById("projects").scrollIntoView();
+            window.scrollBy(0, -50);
         }
         function scrollAbout() {
             document.getElementById("about").scrollIntoView();
@@ -372,104 +378,104 @@
     </script>
     
     <section class="section-top" id="topHeader">
-        <h4>Hello, my name is</h4>  
+        <h2>Hello, my name is</h2>  
         <h1 class="name">Henry Chen</h1>
         <img src="photo.jpg" width="300" height="400">
         <hr class="black-center">
-        <h4>Computer Science and Game Development at Western University.</h4>
-        <h4>Quality Assurance Intern at J.D. Power</h4>
-        <h3 class="section-title">My Resume</h3>
+        <h2>Computer Science and Game Development at Western University.</h2>
+        <h2>Quality Assurance Intern at J.D. Power</h2>
+        <h1 class="name">My Resume</h1>
         <hr class="black-small">
         <a class="btnResume" href="Resume.pdf" target="_blank">Read Here</a>
      </section>
     
     <section id="workHistory">
         <div class="services">
-            <h3>Work History</h3>
+            <h1 class="name">Work History</h1>
             <hr class="black-left">
         </div>    
         <div class="services">
             <div class="service-container">
                 <div class="service-right">
-                    <h3 class="servicename">
+                    <h2 >
                         <i class="fa fa-building-o"></i>
-                        Junior Achievement Business Program (2017-2018)</h3>
-                    <h5>
-                        Assited in Product Planning
-                    </h5>
-                    <h5>
-                        Took Part in Product Production and Sales
-                    </h5>
-                    <h5>
-                    Assited in Company Finances and Book-Keeping
-                    </h5>
+                        Junior Achievement Business Program (2017-2018)</h2>
                     <p class="service-explain">
-                        Technologies: Microsoft Office
+                        &#9679; Assited in Product Planning
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Took Part in Product Production and Sales
+                    </p>
+                    <p class="service-explain">
+                    &#9679; Assited in Company Finances and Book-Keeping
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Technologies: Microsoft Office
                     </p>  
                     <p class="service-explain">
-                        Skills: Self-Management, Team-Work, Financial-Management, Communication
+                        &#9679; Skills: Self-Management, Team-Work, Financial-Management, Communication
                     </p>    
                 </div>  
             </div>
             <div class="service-container">
                 <div class="service-right">
-                    <h3 class="servicename">
+                    <h2>
                         <i class="fa fa-database"></i>
-                        Pathfinders Non-Profit Organization (2022 May - July)</h3>
-                    <h5>
-                        Fixed errors for the organization's WordPress websites
-                    </h5>
-                    <h5>Set-Up and Fixed Google Ad Campaigns for the organization</h5>
-                    <h5>Managed, edited, and Created a Large Variety of Data Spreadsheets</h5>
+                        Pathfinders Non-Profit Organization (2022 May - July)</h2>
                     <p class="service-explain">
-                        Technologies: HTML, CSS, Javascript, WordPress, Microsoft Office
+                        &#9679; Fixed errors for the organization's WordPress websites
+                    </p>
+                    <p class="service-explain">&#9679; Set-Up and Fixed Google Ad Campaigns for the organization</p>
+                    <p class="service-explain">&#9679; Managed, edited, and Created a Large Variety of Data Spreadsheets</p>
+                    <p class="service-explain">
+                        &#9679; Technologies: HTML, CSS, Javascript, WordPress, Microsoft Office
                     </p> 
                     <p class="service-explain">
-                        Skills: Self-Management, Team Collaboration, Attention to Detail, Reliability, 
+                        &#9679; Skills: Self-Management, Team Collaboration, Attention to Detail, Reliability, 
                     </p> 
                 </div> 
             </div>
             <div class="service-container">
                 <div class="service-right">
-                    <h3 class="servicename">
+                    <h2>
                         <i class="fa fa-file-code-o"></i>
-                        Western Developers Society Club (2022 - 2023)</h3>
-                    <h5>
-                        Assited in project planning and project work for the club
-                    </h5>
+                        Western Developers Society Club (2022 - 2023)</h2>
                     <p class="service-explain">
-                        Technologies: Javascript, CSS, React, Node.JS, Slack, Figma
+                        &#9679; Assited in project planning and project work for the club
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Technologies: Javascript, CSS, React, Node.JS, Slack, Figma
                     </p> 
                     <p class="service-explain">
-                        Skills: Self-Management, Team Communication 
+                        &#9679; Skills: Self-Management, Team Communication 
                     </p>  
                  </div>      
             </div>
             <div class="service-container">
                 <div class="service-right">
-                    <h3 class="servicename">
+                    <h2>
                         <i class="fa fa-code"></i>
-                        J.D. POWER (2023 - )</h3>
-                    <h5>
-                        16 Month Quality Assurance Intern
-                    </h5>
-                    <h5>
-                        Created Automated Java Cucumber Tests for Company API's
-                    </h5>
-                    <h5>
-                        Troubleshooted Grafana Data Dashboards
-                    </h5>
-                    <h5>
-                        Troubleshooted MySql and Sql-Server Issues
-                    </h5>
-                    <h5>
-                        Set-Up GitLab CI-CD Data Pipelines
-                    </h5>
+                        J.D. POWER (2023 - )</h2>
                     <p class="service-explain">
-                        Technologies: Java, Cucumber, Shell-Scripting, MySql, Sql-Server, PostMan, GitLab CI-CD
+                        &#9679; 16 Month Quality Assurance Intern
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Created Automated Java Cucumber Tests for Company API's
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Troubleshooted Grafana Data Dashboards
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Troubleshooted MySql and Sql-Server Issues
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Set-Up GitLab CI-CD Data Pipelines
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Technologies: Java, Cucumber, Shell-Scripting, MySql, Sql-Server, PostMan, GitLab CI-CD
                     </p> 
                     <p class="service-explain">
-                        Skills: Self-Learning, Team-Coordination
+                        &#9679; Skills: Self-Learning, Team-Coordination
                     </p>  
                  </div>      
             </div>
@@ -478,32 +484,32 @@
     
     <section id="projects">
         <div class="personal">
-            <h3>Project History</h3>
+            <h1 class="name">Project History</h1>
             <hr class="black-left">
         </div>    
         <div class="personal">
             <div class="personal-container">
                 <div class="personal-right">
-                    <h3 class="servicename">
+                    <h2>
                         <i class="fa fa-gamepad"></i>
-                        Video Game Modding (2021 - )</h3>
-                    <h5>
-                        Made Video Game Modifications(Mods) to Alter the Gameplay Experience for Various Strategy Games.
-                    </h5>
-                    <h5>
-                        Added GUI to Debug Resources in a WW2 Strategy Game.
-                    </h5>
-                    <h5>
-                        Also Made Starting Naval Units for Countries More Historically Accurate
-                    </h5>
-                    <h5>
-                        Made Balance Changes to Colonization in Exploration Strategy Game
-                    </h5>
+                        Video Game Modding (2021 - )</h2>
                     <p class="service-explain">
-                        Technologies: Video Game Scripting Languages, Notepad++
+                        Made Video Game Modifications(Mods) to Alter the Gameplay Experience for Various Strategy Games.
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Added GUI to Debug Resources in a WW2 Strategy Game.
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Also Made Starting Naval Units for Countries More Historically Accurate
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Made Balance Changes to Colonization in Exploration Strategy Game
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Technologies: Video Game Scripting Languages, Notepad++
                     </p>    
                     <p class="service-explain">
-                        Skills: Attention to Detail, Initiative to Learn
+                        &#9679; Skills: Attention to Detail, Initiative to Learn
                     </p> 
                     <hr class="black-left-small">
                     <a class="btnLink" href="https://steamcommunity.com/profiles/76561198171113454/myworkshopfiles/" target="_blank">Link Here</a>
@@ -515,23 +521,23 @@
             </div>
             <div class="personal-container">
                 <div class="personal-right">
-                    <h3 class="servicename">
+                    <h2>
                         <i class="fa fa-line-chart"></i>
-                        Crypto Currency Display and Analysis Application (2021)</h3>
-                    <h5>
-                        Fetches and Displays Real Time Data About Crypto Currencies, such as BitCoin. 
-                    </h5>
-                    <h5>
-                        Collects Price Data and More
-                    </h5>
-                    <h5>
-                        Visualizes Data with Bar Charts, Line Graphs, and More
-                    </h5>
+                        Crypto Currency Display and Analysis Application (2021)</h2>
                     <p class="service-explain">
-                        Technologies: Jira, BitBucket, Confluence, Java
+                        &#9679; Fetches and Displays Real Time Data About Crypto Currencies, such as BitCoin. 
                     </p>
                     <p class="service-explain">
-                        Skills: Self-Management, Team Collaboration 
+                        &#9679; Collects Price Data and More
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Visualizes Data with Bar Charts, Line Graphs, and More
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Technologies: Jira, BitBucket, Confluence, Java
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Skills: Self-Management, Team Collaboration 
                     </p> 
                 </div> 
                 <div class="personal-right">
@@ -540,27 +546,27 @@
             </div>
             <div class="personal-container">
                 <div class="personal-right">
-                    <h3 class="servicename">
+                    <h2>
                         <i class="fa fa-file-code-o"></i>
-                        Western Developers Society Club Website (2022 - 2023)</h3>
-                    <h5>
-                        Contributed to the front-end work of the website
-                    </h5>
-                     <h5>
-                        Assited in the planning of the website style and design
-                    </h5>
-                    <h5>
-                        Coded portions of the main-page
-                    </h5>
-                    <h5>
-                        Coded portions of the about-page and it's footer
-                    </h5>
+                        Western Developers Society Club Website (2022 - 2023)</h2>
+                    <p class="service-explain">
+                        &#9679; Contributed to the front-end work of the website
+                    </p>
+                     <p class="service-explain">
+                        &#9679; Assited in the planning of the website style and design
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Coded portions of the main-page
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Coded portions of the about-page and it's footer
+                    </p>
                     
                     <p class="service-explain">
-                        Technologies: HTML, Javascript, CSS, React, Node.JS, Slack, Figma 
+                        &#9679; Technologies: HTML, Javascript, CSS, React, Node.JS, Slack, Figma 
                     </p>  
                     <p class="service-explain">
-                        Skills: Self-Management, Team Communication, Project Planning 
+                        &#9679; Skills: Self-Management, Team Communication, Project Planning 
                     </p>  
                     <hr class="black-left-small">
                     <a class="btnLink" href="https://westerndev-website-2uk7dcejd-tarazoelee.vercel.app/" target="_blank">Link Here</a>
@@ -571,20 +577,20 @@
             </div>
             <div class="personal-container">
                 <div class="personal-right">
-                    <h3 class="servicename">
+                    <h2>
                         <i class="fa fa-steam"></i>
-                        Steam Comment Collector (2023)</h3>
-                    <h5>
-                        Created a Scraping-Tool to Collect Comments from Steam Workshop
-                    </h5>
-                     <h5>
-                        This Allows a Developer to Store and Record Steam Comments, and then Search Through the Giles for Links, Feedback, Etc
-                    </h5>
+                        Steam Comment Collector (2023)</h2>
                     <p class="service-explain">
-                        Technologies: Selenium, Java, Java Swing
+                        &#9679; Created a Scraping-Tool to Collect Comments from Steam Workshop
+                    </p>
+                     <p class="service-explain">
+                        &#9679; This Allows a Developer to Store and Record Steam Comments, and then Search Through the Giles for Links, Feedback, Etc
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Technologies: Selenium, Java, Java Swing
                     </p>  
                     <p class="service-explain">
-                        Skills: Self-Management
+                        &#9679; Skills: Self-Management
                     </p>  
                     <hr class="black-left-small">
                     <a class="btnLink" href="https://github.com/hxc34/steam-comment-collector" target="_blank">Link Here</a>
@@ -598,7 +604,7 @@
 
     <section id="about">
         <div class="about-container">
-            <h3>About Me</h3>
+            <h2>About Me</h2>
             <hr class="black-left">
         </div>
         <div class="about-container">
