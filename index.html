@@ -114,7 +114,7 @@
         
         a.btnResume, a.btnLink {
             border: 2px solid #1a1a1a;
-            padding: 6px 26px;
+            padding: 4px 26px;
             border-radius: 20px;
             text-transform: uppercase;
             text-decoration: none;
@@ -317,8 +317,8 @@
             </button>
             <div class="dropdown-content" id="myDropdown">
                 <a onclick="scrollStart()" >Introduction</a>
-                <a onclick="scrollWork()" >Work History</a>
-                <a onclick="scrollProject()" >Project History</a>
+                <a onclick="scrollWork()" >Professional Experience</a>
+                <a onclick="scrollProject()" >Personal Projects and Extracurricular Involvement</a>
                 <a onclick="scrollAbout()" >About Me</a>
             </div>
         </div> 
@@ -378,20 +378,19 @@
     </script>
     
     <section class="section-top" id="topHeader">
-        <h2>Hello, my name is</h2>  
+        <h3>Hello, my name is</h3>  
         <h1 class="name">Henry Chen</h1>
         <img src="photo.jpg" width="300" height="400">
         <hr class="black-center">
         <h2>Computer Science and Game Development at Western University.</h2>
-        <h2>Quality Assurance Intern at J.D. Power</h2>
+                <hr class="black-small">
         <h1 class="name">My Resume</h1>
-        <hr class="black-small">
         <a class="btnResume" href="Resume.pdf" target="_blank">Read Here</a>
      </section>
     
     <section id="workHistory">
         <div class="services">
-            <h1 class="name">Work History</h1>
+            <h1 class="name">Professional Experience</h1>
             <hr class="black-left">
         </div>    
         <div class="services">
@@ -423,6 +422,9 @@
                         <i class="fa fa-database"></i>
                         Pathfinders Non-Profit Organization (2022 May - July)</h2>
                     <p class="service-explain">
+                        &#9679; 12 Week Technical Assistant
+                    </p>
+                    <p class="service-explain">
                         &#9679; Fixed errors for the organization's WordPress websites
                     </p>
                     <p class="service-explain">&#9679; Set-Up and Fixed Google Ad Campaigns for the organization</p>
@@ -435,111 +437,38 @@
                     </p> 
                 </div> 
             </div>
-            <div class="service-container">
-                <div class="service-right">
-                    <h2>
-                        <i class="fa fa-file-code-o"></i>
-                        Western Developers Society Club (2022 - 2023)</h2>
-                    <p class="service-explain">
-                        &#9679; Assited in project planning and project work for the club
-                    </p>
-                     <p class="service-explain">
-                        &#9679; Worked on the Club's Main Website (more details in "Project History" section)
-                    </p>
-                    <p class="service-explain">
-                        &#9679; Technologies: Javascript, CSS, React, Node.JS, Slack, Figma
-                    </p> 
-                    <p class="service-explain">
-                        &#9679; Skills: Self-Management, Team Communication 
-                    </p>  
-                 </div>      
-            </div>
-            <div class="service-container">
-                <div class="service-right">
-                    <h2 >
-                        <i class="fa fa-building-o"></i>
-                        Junior Achievement Business Program (2017-2018)</h2>
-                    <p class="service-explain">
-                        &#9679; Assited in Product Planning
-                    </p>
-                    <p class="service-explain">
-                        &#9679; Took Part in Product Production and Sales
-                    </p>
-                    <p class="service-explain">
-                    &#9679; Assited in Company Finances and Book-Keeping
-                    </p>
-                    <p class="service-explain">
-                        &#9679; Technologies: Microsoft Office
-                    </p>  
-                    <p class="service-explain">
-                        &#9679; Skills: Self-Management, Team-Work, Financial-Management, Communication
-                    </p>    
-                </div>  
-            </div>
         </div>
     </section>
     
     <section id="projects">
         <div class="personal">
-            <h1 class="name">Project History</h1>
+            <h1 class="name">Personal Projects and Extracurricular Involvement</h1>
             <hr class="black-left">
         </div>    
         <div class="personal">
             <div class="personal-container">
                 <div class="personal-right">
                     <h2>
-                        <i class="fa fa-gamepad"></i>
-                        Video Game Modding (2021 - )</h2>
+                        <i class="fa fa-steam"></i>
+                        Steam Comment Collector (2023)</h2>
                     <p class="service-explain">
-                        Made Video Game Modifications(Mods) to Alter the Gameplay Experience for Various Strategy Games.
+                        &#9679; Created a Scraping-Tool to Collect Comments from Steam Workshop
+                    </p>
+                     <p class="service-explain">
+                        &#9679; This Allows a Developer to Store and Record Steam Comments, and then Search Through the Giles for Links, Feedback, Etc
                     </p>
                     <p class="service-explain">
-                        &#9679; Added GUI to Debug Resources in a WW2 Strategy Game.
-                    </p>
+                        &#9679; Technologies: Selenium, Java, Java Swing
+                    </p>  
                     <p class="service-explain">
-                        &#9679; Also Made Starting Naval Units for Countries More Historically Accurate
-                    </p>
-                    <p class="service-explain">
-                        &#9679; Made Balance Changes to Colonization in Exploration Strategy Game
-                    </p>
-                    <p class="service-explain">
-                        &#9679; Technologies: Video Game Scripting Languages, Notepad++
-                    </p>    
-                    <p class="service-explain">
-                        &#9679; Skills: Attention to Detail, Initiative to Learn
-                    </p> 
+                        &#9679; Skills: Self-Management
+                    </p>  
                     <hr class="black-left-small">
-                    <a class="btnLink" href="https://steamcommunity.com/profiles/76561198171113454/myworkshopfiles/" target="_blank">Link Here</a>
-                    
+                    <a class="btnLink" href="https://github.com/hxc34/steam-comment-collector" target="_blank">Link Here</a>
+                 </div>
+                <div class="personal-right">
+                    <img src="collector.PNG">
                 </div> 
-                <div class="personal-right">
-                    <img src="modding.jpg" width="900" height="500">
-                </div>    
-            </div>
-            <div class="personal-container">
-                <div class="personal-right">
-                    <h2>
-                        <i class="fa fa-line-chart"></i>
-                        Crypto Currency Display and Analysis Application (2021)</h2>
-                    <p class="service-explain">
-                        &#9679; Fetches and Displays Real Time Data About Crypto Currencies, such as BitCoin. 
-                    </p>
-                    <p class="service-explain">
-                        &#9679; Collects Price Data and More
-                    </p>
-                    <p class="service-explain">
-                        &#9679; Visualizes Data with Bar Charts, Line Graphs, and More
-                    </p>
-                    <p class="service-explain">
-                        &#9679; Technologies: Jira, BitBucket, Confluence, Java
-                    </p>
-                    <p class="service-explain">
-                        &#9679; Skills: Self-Management, Team Collaboration 
-                    </p> 
-                </div> 
-                <div class="personal-right">
-                    <img src="CryptoTool.PNG" width="900" height="500">
-                </div>  
             </div>
             <div class="personal-container">
                 <div class="personal-right">
@@ -575,26 +504,80 @@
             <div class="personal-container">
                 <div class="personal-right">
                     <h2>
-                        <i class="fa fa-steam"></i>
-                        Steam Comment Collector (2023)</h2>
+                        <i class="fa fa-line-chart"></i>
+                        Crypto Currency Display and Analysis Application (2021)</h2>
                     <p class="service-explain">
-                        &#9679; Created a Scraping-Tool to Collect Comments from Steam Workshop
-                    </p>
-                     <p class="service-explain">
-                        &#9679; This Allows a Developer to Store and Record Steam Comments, and then Search Through the Giles for Links, Feedback, Etc
+                        &#9679; Fetches and Displays Real Time Data About Crypto Currencies, such as BitCoin. 
                     </p>
                     <p class="service-explain">
-                        &#9679; Technologies: Selenium, Java, Java Swing
-                    </p>  
+                        &#9679; Collects Price Data and More
+                    </p>
                     <p class="service-explain">
-                        &#9679; Skills: Self-Management
-                    </p>  
-                    <hr class="black-left-small">
-                    <a class="btnLink" href="https://github.com/hxc34/steam-comment-collector" target="_blank">Link Here</a>
-                 </div>
-                <div class="personal-right">
-                    <img src="collector.PNG">
+                        &#9679; Visualizes Data with Bar Charts, Line Graphs, and More
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Technologies: Jira, BitBucket, Confluence, Java
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Skills: Self-Management, Team Collaboration 
+                    </p> 
                 </div> 
+                <div class="personal-right">
+                    <img src="CryptoTool.PNG" width="900" height="500">
+                </div>  
+            </div>
+            <div class="personal-container">
+                <div class="personal-right">
+                    <h2>
+                        <i class="fa fa-gamepad"></i>
+                        Video Game Modding (2021 - )</h2>
+                    <p class="service-explain">
+                        Made Video Game Modifications(Mods) to Alter the Gameplay Experience for Various Strategy Games.
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Added GUI to Debug Resources in a WW2 Strategy Game.
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Also Made Starting Naval Units for Countries More Historically Accurate
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Made Balance Changes to Colonization in Exploration Strategy Game
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Technologies: Video Game Scripting Languages, Notepad++
+                    </p>    
+                    <p class="service-explain">
+                        &#9679; Skills: Attention to Detail, Initiative to Learn
+                    </p> 
+                    <hr class="black-left-small">
+                    <a class="btnLink" href="https://steamcommunity.com/profiles/76561198171113454/myworkshopfiles/" target="_blank">Link Here</a>
+                    
+                </div> 
+                <div class="personal-right">
+                    <img src="modding.jpg" width="900" height="500">
+                </div>    
+            </div>
+            <div class="personal-container">
+                <div class="personal-right">
+                    <h2 >
+                        <i class="fa fa-building-o"></i>
+                        Junior Achievement Business Program (2017-2018)</h2>
+                    <p class="service-explain">
+                        &#9679; Assited in Product Planning
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Took Part in Product Production and Sales
+                    </p>
+                    <p class="service-explain">
+                    &#9679; Assited in Company Finances and Book-Keeping
+                    </p>
+                    <p class="service-explain">
+                        &#9679; Technologies: Microsoft Office
+                    </p>  
+                    <p class="service-explain">
+                        &#9679; Skills: Self-Management, Team-Work, Financial-Management, Communication
+                    </p>    
+                </div>  
             </div>
         </div>
     </section>
@@ -606,22 +589,65 @@
         </div>
         <div class="about-container">
             <h3 class="servicename">
-                <i class="fa fa-language"></i> Languages: Python, Java, Shell-Scripting, C++, R, Assembly, HTML5, CSS, Javascript, Cucumber, Playwright 
+                <i class="fa fa-graduation-cap"></i> Academic Experience: 
+                    <ul style="padding-left:20px"> 
+                        <li>Bachelors in Science</li>
+                        <li>Honours Major in  Computer Science and Minor in Game Development</li>
+                        <li>GPA of 3.7 out of 4</li>
+                        <li>On Dean’s honour list</li>
+                    </ul>
+            </h3>            
+            <h3 class="servicename">
+                <i class="fa fa-language"></i> Known Programming Languages: 
+                    <ul style="padding-left:20px"> 
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>Shell-Scripting</li>
+                        <li>C++</li>
+                        <li>R</li>
+                        <li>Assembly</li>
+                        <li>HTML5</li>
+                        <li>CSS</li>
+                        <li>React Framework</li>
+                        <li>Javascript</li>
+                        <li>Cucumber</li>
+                        <li>Playwright</li>
+                    </ul>
             </h3>
             <h3 class="servicename">
-                <i class="fa fa-laptop"></i> Applications: Github, Microsoft Office, React Framework, UMLet, ProjectLibre, Bitbucket, Jira, Confluence, Figma, Slack, WordPress, Brackets, PostMan, SQL Server, MySql  
+                <i class="fa fa-laptop"></i> Known Applications: 
+                    <ul style="padding-left:20px"> 
+                        <li>Github</li>
+                        <li>Microsoft Office</li>
+                        <li>UMLet</li>
+                        <li>ProjectLibre</li>
+                        <li>Bitbucket</li>
+                        <li>Jira</li>
+                        <li>Confluence</li>
+                        <li>Figma</li>
+                        <li>Slack</li>
+                        <li>WordPress</li>
+                        <li>PostMan</li>
+                        <li>SQL-Server</li>
+                        <li>MySql</li>
+                    </ul>                
             </h3>
             <h3 class="servicename">
-                <i class="fa fa-cog"></i> Planning: Waterfalling Planning Style, Agile Development-Style Planning
+                <i class="fa fa-cog"></i> Known Methodologies:
+                    <ul style="padding-left:20px"> 
+                        <li>Agile Development</li>
+                        <li>QA Processes</li>
+                    </ul>
             </h3>
             <h3 class="servicename">
-                <i class="fa fa-search"></i> Quality Assurance: QA terms and methodology, Automated tests in Java + Cucumber or in Playwright
-            </h3>
-            <h3 class="servicename">
-                <i class="fa fa-graduation-cap"></i> Academic Interests: Coding, Video-Game Developement, Philosphy, History, Political Theory
-            </h3>
-            <h3 class="servicename">
-                <i class="fa fa-book"></i> Hobbies: Videogames, Reading, Taking Walks and Hiking
+                <i class="fa fa-book"></i> Personal Interests:
+                    <ul style="padding-left:20px"> 
+                        <li>Video-Game Developement</li>
+                        <li>Video-Games</li>
+                        <li>Philosphy</li>
+                        <li>History</li>
+                        <li>Taking Walks and Hiking</li>
+                    </ul>
             </h3>
                    
         </div>
@@ -643,7 +669,7 @@
         </div>
     </section>
     <section id="contact">
-        © 2024 Henry Chen. Created using HTML5, CSS and Javascript in Brackets
+        © 2025 Henry Chen. Created using HTML5, CSS, and Javascript
     </section>
 </body>
 </html>
